@@ -11,15 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130224105534) do
+ActiveRecord::Schema.define(:version => 20130224112835) do
 
   create_table "registrars", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.integer  "phone"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "schedule_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "schedules", :force => true do |t|
+    t.string   "file_name"
+    t.date     "date_uploaded"
+    t.string   "schedule"
+    t.string   "semester_year"
+    t.integer  "registrar_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end
