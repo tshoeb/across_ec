@@ -1,5 +1,6 @@
 AcrossEc::Application.routes.draw do
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   resources :universities
 =======
@@ -8,6 +9,9 @@ AcrossEc::Application.routes.draw do
 >>>>>>> fd63870c4dff45a25817568fa08d43c556e9e363
 
   resources :registrars
+=======
+  resources :students
+>>>>>>> 57f1e1ed2d27af3c203410b32c91959a237def01
 
 
   # The priority is based upon order of creation:
