@@ -1,0 +1,33 @@
+<%= form_for(@registrar) do |f| %>
+  <% if @registrar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registrar.errors.count, "error") %> prohibited this registrar from being saved:</h2>
+
+      <ul>
+      <% @registrar.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.number_field :phone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

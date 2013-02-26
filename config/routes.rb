@@ -1,7 +1,10 @@
 AcrossEc::Application.routes.draw do
+
   resources :universities
 
-  match '/universities', :to => 'universities#index'
+  resources :registrars
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
