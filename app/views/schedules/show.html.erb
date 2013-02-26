@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>File name:</b>
+  <%= @schedule.file_name %>
+</p>
+
+<p>
+  <b>Date uploaded:</b>
+  <%= @schedule.date_uploaded %>
+</p>
+
+<p>
+  <b>Schedule:</b>
+  <%= @schedule.schedule %>
+</p>
+
+<p>
+  <b>Semester year:</b>
+  <%= @schedule.semester_year %>
+</p>
+
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>

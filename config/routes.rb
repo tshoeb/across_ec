@@ -1,6 +1,11 @@
 AcrossEc::Application.routes.draw do
+<<<<<<< HEAD
 
   resources :universities
+=======
+  resources :schedules
+
+>>>>>>> fd63870c4dff45a25817568fa08d43c556e9e363
 
   resources :registrars
 

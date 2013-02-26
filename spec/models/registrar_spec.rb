@@ -7,6 +7,9 @@ describe Registrar do
      it {validate_presence_of :phone}
      it {Registrar.new.should validate_presence_of :email} 
    end
+   
+   it {should have_many(:schedules)}
+   
    describe "validates good emails" do 
      it {should allow_value("zuhair.ghalib@gmail.com").for(:email)}
      it {should allow_value("zuhair.ghalib@gmail.qa").for(:email)}
