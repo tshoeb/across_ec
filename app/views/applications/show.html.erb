@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Application date:</b>
+  <%= @application.application_date %>
+</p>
+
+<p>
+  <b>Course no:</b>
+  <%= @application.course_no %>
+</p>
+
+<p>
+  <b>University:</b>
+  <%= @application.university_id %>
+</p>
+
+<p>
+  <b>Passport copy:</b>
+  <%= @application.passport_copy %>
+</p>
+
+<p>
+  <b>Sign form:</b>
+  <%= @application.sign_form %>
+</p>
+
+<p>
+  <b>Semester year:</b>
+  <%= @application.semester_year %>
+</p>
+
+<p>
+  <b>Registrar:</b>
+  <%= @application.registrar_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>
