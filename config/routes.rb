@@ -1,17 +1,26 @@
 AcrossEc::Application.routes.draw do
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+  get "pages/home"
+
+  get "pages/about"
+
+  get "pages/contact"
+
+  get "pages/privacy"
+
+  root :to => 'pages#home'
+ 
+  match '/loginasregistrar', :to => 'sessions#new'
+  match '/loginasstudent', :to => 'sessions_students#new'
+  match '/registrarlogout', :to => 'sessions#destroy'
+  match '/studentlogout', :to => 'sessions_students#destroy'
 
   resources :universities
-=======
   resources :schedules
-
->>>>>>> fd63870c4dff45a25817568fa08d43c556e9e363
-
+  resources :sessions
   resources :registrars
-=======
   resources :students
->>>>>>> 57f1e1ed2d27af3c203410b32c91959a237def01
+  resources :sessions_students
 
 
   # The priority is based upon order of creation:

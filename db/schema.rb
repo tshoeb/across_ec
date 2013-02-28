@@ -11,19 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20130224112835) do
-=======
-ActiveRecord::Schema.define(:version => 20130227150145) do
->>>>>>> zuhairG-schedule
+ActiveRecord::Schema.define(:version => 20130227213037) do
 
   create_table "registrars", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.integer  "phone"
-    t.integer  "schedule_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
@@ -39,13 +33,6 @@ ActiveRecord::Schema.define(:version => 20130227150145) do
     t.datetime "updated_at",    :null => false
   end
 
-  create_table "universities", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-=======
-ActiveRecord::Schema.define(:version => 20130224111738) do
-
   create_table "students", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -56,7 +43,13 @@ ActiveRecord::Schema.define(:version => 20130224111738) do
     t.date     "year_of_graduation"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
->>>>>>> 57f1e1ed2d27af3c203410b32c91959a237def01
+    t.string   "password_digest"
+  end
+
+  create_table "universities", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
