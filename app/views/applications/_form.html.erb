@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :university_id %><br />
-    <%= f.number_field :university_id %>
+    <%= f.select(:university_id, Application::UNIVERSITIES) %><br />
   </div>
   <div class="field">
 	 <%= f.label :passport_copy %><br />
@@ -35,10 +35,7 @@
     <%= f.label :semester_year %><br />
     <%= f.text_field :semester_year %>
   </div>
-  <div class="field">
-    <%= f.label :registrar_id %><br />
-    <%= f.number_field :registrar_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

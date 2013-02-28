@@ -25,18 +25,4 @@ ActiveRecord::Schema.define(:version => 20130226180955) do
     t.datetime "updated_at",       :null => false
   end
 
-  create_table "students", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.integer  "student_number"
-    t.integer  "mobile"
-    t.string   "major"
-    t.date     "year_of_graduation"
-    t.integer  "application_id"
-    t.integer  "university_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-  end
-
 end

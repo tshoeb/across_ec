@@ -16,10 +16,10 @@ describe "applications/show" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Course No/)
-    rendered.should match(/1/)
+    rendered.should match(/University/)
     rendered.should match(/Passport Copy/)
     rendered.should match(/Sign Form/)
     rendered.should match(/Semester Year/)
-    rendered.should match(/2/)
+    rendered.should match(/Registrar/)
   end
 end
