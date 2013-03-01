@@ -1,5 +1,4 @@
 AcrossEc::Application.routes.draw do
-<<<<<<< HEAD
 
   get "pages/home"
 
@@ -22,9 +21,7 @@ AcrossEc::Application.routes.draw do
   resources :registrars
   resources :students
   resources :sessions_students
-=======
   resources :applications
->>>>>>> cc37178202ce04ddc70a6796b421c454693345d5
 
 
   # The priority is based upon order of creation:
