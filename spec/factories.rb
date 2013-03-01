@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require 'factory_girl'
 
 FactoryGirl.define do
@@ -20,4 +21,18 @@ FactoryGirl.define do
       schedule "Spring.pdf"
       association :registrar
   end
+=======
+FactoryGirl.define do
+  factory :application do
+     application_date 2.months.ago
+       course_no "s3124"
+       passport_copy File.open(File.join(Rails.root, '/spec/test.pdf'))
+       registrar_id 2
+       semester_year "s2013"
+       sign_form File.open(File.join(Rails.root, '/spec/test.pdf'))
+       university_id 1
+      # association :student
+  end
+  
+>>>>>>> cc37178202ce04ddc70a6796b421c454693345d5
 end

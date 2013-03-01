@@ -1,4 +1,5 @@
 AcrossEc::Application.routes.draw do
+<<<<<<< HEAD
 
   get "pages/home"
 
@@ -21,6 +22,9 @@ AcrossEc::Application.routes.draw do
   resources :registrars
   resources :students
   resources :sessions_students
+=======
+  resources :applications
+>>>>>>> cc37178202ce04ddc70a6796b421c454693345d5
 
 
   # The priority is based upon order of creation:
@@ -72,7 +76,7 @@ AcrossEc::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'applications#home'
 
   # See how all your routes lay out with "rake routes"
 
