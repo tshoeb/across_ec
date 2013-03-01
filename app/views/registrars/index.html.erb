@@ -18,8 +18,12 @@
     <td><%= registrar.email %></td>
     <td><%= registrar.phone %></td>
     <td><%= link_to 'Show', registrar %></td>
-    <td><%= link_to 'Edit', edit_registrar_path(registrar) %></td>
+    <% if can? :update, @registrar %>
+      <td><%= link_to 'Edit', edit_registrar_path(registrar) %></td>
+    <% end %>
+    <% if can? :update, @registrar %>
     <td><%= link_to 'Destroy', registrar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

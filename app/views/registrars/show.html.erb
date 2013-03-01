@@ -20,6 +20,7 @@
   <%= @registrar.phone %>
 </p>
 
-
-<%= link_to 'Edit', edit_registrar_path(@registrar) %> |
+<% if can? :update, @registrar %>
+	<%= link_to 'Edit', edit_registrar_path(@registrar) %> |
+<% end %>
 <%= link_to 'Back', registrars_path %>
