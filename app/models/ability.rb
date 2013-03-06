@@ -2,13 +2,30 @@ class Ability < ActiveRecord::Base
 
   include CanCan::Ability
 
-  #def initialize(student)
-      #can :read, Student , :student_id => student.id
-      #can :update, Student, :student_id => student.id
-      #can :destroy, :student_id => student.id
-      #can :read, Registrar
-      #can :read, Schedule
-  #end
+  def initialize(user)
+    if user.nil?
+      can :read, Schedule
+      can :read, Registrar
+    
+    elsif user.class == Student
+      can :read, Student , :id => user.id
+      can :update, Student, :id => user.id
+      can :destroy, Student, :id => user.id
+      can :read, Registrar
+      can :read, Schedule
+    
+    elsif user.class == Registrar
+      if user.admin?
+       can :manage, :all
+      else
+       can :read, Registrar
+       can :update, Registrar, :id => user.id
+       can :destroy, Registrar, :id => user.id
+       can :read, Student
+       can :read, Application
+      end
+    end
+  end
  #def initialize (registrar)
     #if registrar.admin?
      # can :manage, :all

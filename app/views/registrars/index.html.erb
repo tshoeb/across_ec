@@ -21,7 +21,7 @@
     <% if can? :update, @registrar %>
       <td><%= link_to 'Edit', edit_registrar_path(registrar) %></td>
     <% end %>
-    <% if can? :update, @registrar %>
+    <% if can? :destroy, @registrar %>
     <td><%= link_to 'Destroy', registrar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
   </tr>
@@ -29,5 +29,6 @@
 </table>
 
 <br />
-
+<% if can? :create, @registrar %>
 <%= link_to 'New Registrar', new_registrar_path %>
+<% end %>
