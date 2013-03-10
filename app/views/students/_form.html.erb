@@ -28,6 +28,10 @@
     <%= f.number_field :mobile %>
   </div>
   <div class="field">
+    <%= f.label :university_id %><br />
+    <%= collection_select(:applications, :university_id, University.all, :id, :name) %><br />
+  </div>
+  <div class="field">
     <%= f.label :major %><br />
     <%= f.text_field :major %>
   </div>
