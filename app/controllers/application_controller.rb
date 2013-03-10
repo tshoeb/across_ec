@@ -22,15 +22,13 @@ class ApplicationController < ActionController::Base
 
   def current_ability
     if current_user.kind_of?(Registrar)
-      @current_ability ||= RegistrarAbility.new(current_user)
+      @current_ability ||= RegistrarAbility.new(current_registrar)
     else
-      @current_ability ||= StudentAbility.new(current_user)
+      @current_ability ||= StudentAbility.new(current_student)
     end
   end
 
   helper_method :current_registrar
   helper_method :current_student
-  helper_method :current_user
   helper_method :current_ability
- # helper_method :current_account
 end

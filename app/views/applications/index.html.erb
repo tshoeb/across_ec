@@ -16,6 +16,7 @@
 
 <% @applications.each do |application| %>
   <tr>
+    <% if current_student != 0 && application.student_id == current_student.id %>
     <td><%= application.application_date %></td>
     <td><%= application.course_no %></td>
     <td><%= application.university_id %></td>
@@ -23,9 +24,16 @@
     <td><%= application.sign_form %></td>
     <td><%= application.semester_year %></td>
     <td><%= application.registrar_id %></td>
+    <% if can? :read, student %>
     <td><%= link_to 'Show', application %></td>
+    <% end %>
+    <% if can? :update, application %>
     <td><%= link_to 'Edit', edit_application_path(application) %></td>
+    <% end %>
+    <% if can? :destroy, student %>
     <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+    <% end %>
   </tr>
 <% end %>
 </table>

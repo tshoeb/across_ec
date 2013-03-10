@@ -3,7 +3,7 @@ class Registrar < ActiveRecord::Base
 	has_secure_password
   validates_presence_of :password, :on => :create
 
-  attr_accessible :email, :first_name, :last_name, :phone, :password, :password_confirmation, :admin, :unviversity_id
+  attr_accessible :email, :first_name, :last_name, :phone, :password, :password_confirmation, :admin, :university_id
   has_many :schedules
   belongs_to :university
   validates :first_name, :last_name, :email, :phone, :presence => true

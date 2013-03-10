@@ -12,7 +12,7 @@
 
 <p>
   <b>University:</b>
-  <%= @registrar.university%>
+  <%= @registrar.university.id %>
 </p>
 
 <p>
@@ -23,6 +23,10 @@
 <p>
   <b>Phone:</b>
   <%= @registrar.phone %>
+</p>
+<p>
+  <b>Admin:</b>
+  <%= @registrar.admin? %>
 </p>
 
 <% if can? :update, @registrar %>

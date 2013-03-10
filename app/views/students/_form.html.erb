@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :university_id %><br />
-    <%= collection_select(:applications, :university_id, University.all, :id, :name) %><br />
+    <%= collection_select(:student, :university_id, University.all, :id, :name) %><br />
   </div>
   <div class="field">
     <%= f.label :major %><br />

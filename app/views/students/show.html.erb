@@ -35,8 +35,6 @@
   <%= @student.year_of_graduation %>
 </p>
 <% if can? :update, @student %>
-<% if can? :update, @registrar %>
 <%= link_to 'Edit', edit_student_path(@student) %> |
-<% end %>
 <% end %>
 <%= link_to 'Back', students_path %>

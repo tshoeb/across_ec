@@ -13,11 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130306070643) do
 
-  create_table "abilities", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "applications", :force => true do |t|
     t.date     "application_date"
     t.string   "course_no"
