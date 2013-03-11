@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20130301101621) do
     t.string   "last_name"
     t.string   "email"
     t.integer  "phone"
+    t.integer  "schedule_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
