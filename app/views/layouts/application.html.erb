@@ -18,6 +18,13 @@
 <% end %>
 
 
+
+<div id="logo" ><img src="http://s13.postimage.org/dsjxojht3/plogo.gif" alt="Across EC logo"  width="245" height="145">
+ 
+
+<div id="topTitle">
+<h1> <%= @title %> </h1> 
+</div>
 <% if current_registrar %>	
 <div id="username">
 <p> <a href="#profile"> <%=h current_registrar.first_name%> </a><p> 
@@ -31,14 +38,6 @@
 </div>
 <%= link_to "Log out", '/studentlogout' %>
 <% end %>
-
-
-<div id="logo" ><img src="http://s13.postimage.org/dsjxojht3/plogo.gif" alt="Across EC logo"  width="245" height="145">
- 
-
-<div id="topTitle">
-<h1> <%= @title %> </h1> 
-</div>
 </div> 
 
 <div id="box">
