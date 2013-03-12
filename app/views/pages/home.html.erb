@@ -1,4 +1,50 @@
-<h1>Welcome to Across EC</h1>
+<head>
+
+  <script type="text/javascript" src="assets/javascripts/jquery.js"></script>
+  <script type="text/javascript" src="assets/javascripts/jslider.js"></script>
+
+<script type="text/javascript">
+
+$(function() {
+
+	$(".slider").jslider({
+
+		btnNext: ".next", 
+		btnPrev: ".prev"
+	})
+}); 
+
+</script>
+
+
+</head>
+
+<body>
+
+<div id="container">
+
+<img id="prev" class="prev" src="assets/prev.png" /> <img id="next" class="next" src="assets/next.png" />
+
+<div class="slider">
+	<ul>
+		<li> <a href="http://qatar-weill.cornell.edu/"><img class="slider" src="assets/1.jpg" alt="" /></a></li>
+		<li> <a href="http://qatar.cmu.edu/"><img class="slider" src="assets/2.jpg" alt="" /></a></li>
+		<li> <a href="http://www.qatar.tamu.edu/"><img class="slider" src="assets/3.jpg" alt="" /></a></li>
+		<li> <a href="http://www.qatar.northwestern.edu/"><img class="slider" src="assets/4.jpg" alt="" /></a></li>
+		<li> <a href="http://qatar.sfs.georgetown.edu/"><img class="slider" src="assets/5.jpg" alt="" /></a></li>
+		<li> <a href="http://www.qatar.vcu.edu/"><img class="slider" src="assets/6.jpg" alt="" /></a></li>
+	</ul>
+</div>
+
+</div>
+<br> 
+
+<h2> Welcome to our website! </h2>
+
+<p> Across EC is a cross registration website made by the Simple Tech team from Carnegie Mellon University in Qatar.
+We made this website to make the registration process for students and registrars easier within Education City.</p> 
+
+<br>
 <br>
 <%= link_to "Log in as a Registrar", '/loginasregistrar' %>
 <%= link_to "Log in as a Student", '/loginasstudent' %>
@@ -13,3 +59,6 @@
 	<%=h current_student.first_name%>
 	<%= link_to "Log out", '/studentlogout' %>
 <% end %>
+
+
+</body>

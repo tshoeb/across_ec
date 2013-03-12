@@ -1,7 +1,7 @@
 class RegistrarsController < ApplicationController
   # GET /registrars
   # GET /registrars.json
-  load_and_authorize_resource
+  #load_and_authorize_resource
   def index
     @registrars = Registrar.all
 
