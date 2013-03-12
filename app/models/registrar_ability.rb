@@ -9,6 +9,7 @@ class RegistrarAbility < ActiveRecord::Base
          can :destroy, Registrar, :id => user.id
          can :read, Student, :university_id => user.university_id
          can :read, Application, :university_id => user.university_id
+         can :read, University
         end
     end
 end
