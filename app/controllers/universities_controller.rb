@@ -2,6 +2,7 @@ class UniversitiesController < ApplicationController
   # GET /universities
   # GET /universities.json
   def index
+    @title = "Universities"
     @universities = University.all
 
     respond_to do |format|
@@ -13,6 +14,7 @@ class UniversitiesController < ApplicationController
   # GET /universities/1
   # GET /universities/1.json
   def show
+    @title = "University"
     @university = University.find(params[:id])
 
     respond_to do |format|
@@ -24,6 +26,7 @@ class UniversitiesController < ApplicationController
   # GET /universities/new
   # GET /universities/new.json
   def new
+    @title = "Create new University"
     @university = University.new
 
     respond_to do |format|
@@ -34,6 +37,7 @@ class UniversitiesController < ApplicationController
 
   # GET /universities/1/edit
   def edit
+    @title = "Editing University"
     @university = University.find(params[:id])
   end
 

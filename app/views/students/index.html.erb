@@ -13,11 +13,9 @@
     <th></th>
     <th></th>
   </tr>
-
 <% @students.each do |student| %>
-
+ <% if current_student != nil && current_student.id == student.id %>
   <tr>
-    <% if current_student != nil && current_student.id == student.id %>
     <td><%= student.first_name %></td>
     <td><%= student.last_name %></td>
     <td><%= student.email %></td>
@@ -32,8 +30,28 @@
     <% if can? :destroy, student %>
     <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
+  </tr>
+<% end %>
+<% end %>
+<% @students.each do |student| %>
+<% if current_registrar != nil && current_registrar.university_id == student.university_id || current_registrar.admin? %>
+  <tr>
+    <td><%= student.first_name %></td>
+    <td><%= student.last_name %></td>
+    <td><%= student.email %></td>
+    <td><%= student.student_number %></td>
+    <td><%= student.mobile %></td>
+    <td><%= student.major %></td>
+    <td><%= student.year_of_graduation %></td>
+    <td><%= link_to 'Show', student %></td>
+    <% if can? :update, student %>
+    <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    <% end %>
+    <% if can? :destroy, student %>
+    <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
   </tr>
+  <% end %>
 <% end %>
 </table>
 

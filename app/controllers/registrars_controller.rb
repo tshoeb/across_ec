@@ -1,8 +1,9 @@
 class RegistrarsController < ApplicationController
   # GET /registrars
   # GET /registrars.json
-  #load_and_authorize_resource
+  load_and_authorize_resource
   def index
+    @title = "Registrars"
     @registrars = Registrar.all
 
     respond_to do |format|
@@ -14,6 +15,7 @@ class RegistrarsController < ApplicationController
   # GET /registrars/1
   # GET /registrars/1.json
   def show
+    @title = "Registrar"
     @registrar = Registrar.find(params[:id])
 
     respond_to do |format|
@@ -25,6 +27,7 @@ class RegistrarsController < ApplicationController
   # GET /registrars/new
   # GET /registrars/new.json
   def new
+    @title = "Create New Registrar"
     @registrar = Registrar.new
 
     respond_to do |format|
@@ -35,6 +38,7 @@ class RegistrarsController < ApplicationController
 
   # GET /registrars/1/edit
   def edit
+    @title = "Editing Registrar"
     @registrar = Registrar.find(params[:id])
   end
 

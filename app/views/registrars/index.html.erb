@@ -14,7 +14,7 @@
 <% @registrars.each do |registrar| %>
   <tr>
     <% if current_registrar != 0 || registrar.admin == false || current_registrar.admin == true %>
-    <% if current_student != 0 && registrar.admin == false %>
+    <% if current_student  != 0 && registrar.admin == false %>
     <td><%= registrar.first_name %></td>
     <td><%= registrar.last_name %></td>
     <td><%= registrar.email %></td>

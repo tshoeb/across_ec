@@ -7,26 +7,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<<<<<<< HEAD
+
 <% if flash[alert] %>
 	<p class= "flash-error"<%= flash[:alert] %></p>
 <% end %>
 <% if flash[notice] %>
 	<p class= "flash-notice"<%= flash[:notice] %></p>
 <% end %>
-=======
 
-	
+
+<% if current_registrar %>	
 <div id="username">
-<p> <a href="#profile"> Hawra Abdulla </a><p> 
+<p> <a href="#profile"> <%=h current_registrar.first_name%> </a><p> 
 </div>
+<%= link_to "Log out", '/registrarlogout' %>
+<% end %>
+
+<% if current_student %>	
+<div id="username">
+<p> <a href="#profile"> <%=h current_student.first_name%> </a><p> 
+</div>
+<%= link_to "Log out", '/studentlogout' %>
+<% end %>
 
 
 <div id="logo" ><img src="http://s13.postimage.org/dsjxojht3/plogo.gif" alt="Across EC logo"  width="245" height="145">
  
 
 <div id="topTitle">
-<h1> This is the general title </h1> 
+<h1> <%= @title %> </h1> 
 </div>
 </div> 
 
@@ -45,7 +54,7 @@
 </div> 
 
 <div id="content">
->>>>>>> d94759fc828983b78f16d435f43d92f6f0972322
+
 <%= yield %>
 </div> 
 

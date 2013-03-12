@@ -44,21 +44,4 @@ $(function() {
 <p> Across EC is a cross registration website made by the Simple Tech team from Carnegie Mellon University in Qatar.
 We made this website to make the registration process for students and registrars easier within Education City.</p> 
 
-<br>
-<br>
-<%= link_to "Log in as a Registrar", '/loginasregistrar' %>
-<%= link_to "Log in as a Student", '/loginasstudent' %>
-<br>
-<% if current_registrar %>
-	You are logged in as a registrar
-	<%=h current_registrar.first_name%>
-	<%= link_to "Log out", '/registrarlogout' %>
-<% end %>
-<% if current_student%>
-	You are logged in as a student
-	<%=h current_student.first_name%>
-	<%= link_to "Log out", '/studentlogout' %>
-<% end %>
-
-
 </body>

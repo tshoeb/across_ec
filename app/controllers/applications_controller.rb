@@ -1,7 +1,9 @@
 class ApplicationsController < ApplicationController
   # GET /applications
   # GET /applications.json
+  load_and_authorize_resource
   def index
+    @title = "Applications"
     @applications = Application.all
 
     respond_to do |format|
@@ -13,6 +15,7 @@ class ApplicationsController < ApplicationController
   # GET /applications/1
   # GET /applications/1.json
   def show
+    @title = "Student Application"
     @application = Application.find(params[:id])
 
     respond_to do |format|
@@ -24,6 +27,7 @@ class ApplicationsController < ApplicationController
   # GET /applications/new
   # GET /applications/new.json
   def new
+    @title = "New Application"
     @application = Application.new
 
     respond_to do |format|
@@ -34,6 +38,7 @@ class ApplicationsController < ApplicationController
 
   # GET /applications/1/edit
   def edit
+    @title = "Editing Application"
     @application = Application.find(params[:id])
   end
 

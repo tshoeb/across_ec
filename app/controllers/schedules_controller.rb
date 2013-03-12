@@ -1,8 +1,9 @@
 class SchedulesController < ApplicationController
   # GET /schedules
   # GET /schedules.json
-  #load_and_authorize_resource
+  load_and_authorize_resource
   def index
+    @title = "Schedules"
     @schedules = Schedule.all
 
     respond_to do |format|
@@ -14,6 +15,7 @@ class SchedulesController < ApplicationController
   # GET /schedules/1
   # GET /schedules/1.json
   def show
+    @title = "Schedule"
     @schedule = Schedule.find(params[:id])
 
     respond_to do |format|
@@ -25,6 +27,7 @@ class SchedulesController < ApplicationController
   # GET /schedules/new
   # GET /schedules/new.json
   def new
+    @title = "Create new Schedule"
     @schedule = Schedule.new
 
     respond_to do |format|
@@ -35,6 +38,7 @@ class SchedulesController < ApplicationController
 
   # GET /schedules/1/edit
   def edit
+    @title = "Editing Schedule"
     @schedule = Schedule.find(params[:id])
   end
 

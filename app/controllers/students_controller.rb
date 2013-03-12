@@ -1,9 +1,10 @@
 class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
-  #load_and_authorize_resource
+  load_and_authorize_resource
 
   def index
+    @title = "Students"
     @students = Student.all
 
     respond_to do |format|
@@ -15,6 +16,7 @@ class StudentsController < ApplicationController
   # GET /students/1
   # GET /students/1.json
   def show
+    @title = "Student"
     @student = Student.find(params[:id])
 
     respond_to do |format|
@@ -26,6 +28,7 @@ class StudentsController < ApplicationController
   # GET /students/new
   # GET /students/new.json
   def new
+    @title = "Create new Student"
     @student = Student.new
 
     respond_to do |format|
@@ -36,6 +39,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1/edit
   def edit
+    @title = "Editing Student"
     @student = Student.find(params[:id])
   end
 
