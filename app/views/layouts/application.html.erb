@@ -3,8 +3,8 @@
 <head>
   <title>AcrossEc</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
- 
-  <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "application" %>
+ <%= javascript_include_tag "jquery" %>
   <%= javascript_include_tag "jslider" %>
   <%= csrf_meta_tags %>
 
@@ -12,10 +12,10 @@
 <body>
 
 <% if flash[alert] %>
-	<p class= "flash-error"<%= flash[:alert] %></p>
+	<p class= "flash-error"<%= flash[:alert] %>></p>
 <% end %>
 <% if flash[notice] %>
-	<p class= "flash-notice"<%= flash[:notice] %></p>
+	<p class= "flash-notice"<%= flash[:notice] %>></p>
 <% end %>
 
 
@@ -76,7 +76,7 @@
 
 </div>
 
-
+</div>
 
 </body>
 
