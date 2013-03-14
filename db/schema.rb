@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(:version => 20130310121536) do
     t.string   "password_digest"
     t.boolean  "admin"
     t.integer  "university_id"
-    t.integer  "schedule_id"
   end
 
   create_table "schedules", :force => true do |t|
@@ -63,7 +62,7 @@ ActiveRecord::Schema.define(:version => 20130310121536) do
     t.string   "last_name"
     t.string   "email"
     t.integer  "student_number"
-    t.integer  "mobile"
+    t.string   "mobile"
     t.string   "major"
     t.date     "year_of_graduation"
     t.datetime "created_at",         :null => false
