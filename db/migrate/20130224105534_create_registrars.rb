@@ -4,7 +4,7 @@ class CreateRegistrars < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :email
-      t.integer :phone
+      t.string :phone
 
       t.timestamps
     end

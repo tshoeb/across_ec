@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20130310121536) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.integer  "phone"
+    t.string   "phone"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
