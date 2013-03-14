@@ -18,14 +18,14 @@
 
  <% if current_registrar %>	
 <div id="username">
-<p> <a href="#profile"> <%=h current_registrar.first_name%> </a><p> 
+<p> <a href="/show/#{current_registrar.id}"> <%=h current_registrar.first_name%> </a><p> 
 </div>
 <%= link_to "Log out", '/registrarlogout' %>
 <% end %>
 
 <% if current_student %>	
 <div id="username">
-<p> <a href="#profile"> <%=h current_student.first_name%> </a><p> 
+<p> <%= link_to "#{h current_student.first_name}", "/show/#{current_student.id}" %>  <p> 
 </div>
 <%= link_to "Log out", '/studentlogout' %>
 <% end %>
@@ -47,7 +47,11 @@
 <li><a href="/pages/home">Home </a></li> 
 <li><a href="/pages/about">AboutAcrossEC</a></li> 
 <li><a href="/schedules">ViewSchedule</a></li>
+<% if current_student %>
 <li><a href="/applications/new">Apply </a></li>
+<% else %>
+<li><a href="/loginasstudent">Apply </a></li>
+<% end %>
 <li><a href="#status">ApplicationStatus</a></li>
 <li><a href="#">HaveQuestions</a></li> 
 </ul>

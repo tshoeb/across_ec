@@ -34,7 +34,7 @@
 <% end %>
 <% end %>
 <% @students.each do |student| %>
-<% if current_registrar != nil && current_registrar.university_id == student.university_id || current_registrar.admin? %>
+<% if current_registrar != nil && (current_registrar.university_id == student.university_id || current_registrar.admin?) %>
   <tr>
     <td><%= student.first_name %></td>
     <td><%= student.last_name %></td>

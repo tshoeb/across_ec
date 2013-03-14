@@ -28,7 +28,7 @@ class SchedulesController < ApplicationController
   # GET /schedules/new.json
   def new
     @title = "Create new Schedule"
-    @schedule = Schedule.new
+    @schedule = current_registrar.schedules.new
 
     respond_to do |format|
       format.html # new.html.erb

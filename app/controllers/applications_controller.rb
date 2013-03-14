@@ -28,7 +28,7 @@ class ApplicationsController < ApplicationController
   # GET /applications/new.json
   def new
     @title = "New Application"
-    @application = Application.new
+    @application = current_student.applications.new
 
     respond_to do |format|
       format.html # new.html.erb
