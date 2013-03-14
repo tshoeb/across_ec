@@ -52,7 +52,11 @@
 <% else %>
 <li><a href="/loginasstudent">Apply </a></li>
 <% end %>
+<% if current_registrar %>
+<li><a href="/applications">View Applications </a></li>
+<% else %>
 <li><a href="#status">ApplicationStatus</a></li>
+<% end %>
 <li><a href="#">HaveQuestions</a></li> 
 </ul>
 </div> 
