@@ -36,7 +36,7 @@
   </div>
   <div class="field">
     <%= f.label :semester_year %><br />
-    <%= f.text_field :semester_year %>
+    <%= f.select(:semester_year, Application::SEMESTER) %>
   </div>
 
   <div class="actions">
