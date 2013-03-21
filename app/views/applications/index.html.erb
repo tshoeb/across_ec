@@ -24,13 +24,13 @@
     <td><%= application.sign_form %></td>
     <td><%= application.semester_year %></td>
     <td><%= application.registrar_id %></td>
-    <% if can? :read, student %>
+    <% if can? :read, application %>
     <td><%= link_to 'Show', application %></td>
     <% end %>
     <% if can? :update, application %>
     <td><%= link_to 'Edit', edit_application_path(application) %></td>
     <% end %>
-    <% if can? :destroy, student %>
+    <% if can? :destroy, application %>
     <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
     <% end %>

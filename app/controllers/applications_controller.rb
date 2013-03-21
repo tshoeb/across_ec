@@ -86,4 +86,15 @@ class ApplicationsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def approve
+    application = Application.find(params[:id])
+    application.update_attributes(:status => 'approved')
+    redirect_to application_path(application)
+  end
+  def decline
+    application = Application.find(params[:id])
+    application.update_attributes(:status => 'declined')
+    redirect_to application_path(application)
+  end
 end

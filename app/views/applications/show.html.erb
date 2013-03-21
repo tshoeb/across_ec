@@ -35,6 +35,21 @@
   <%= @application.registrar_id %>
 </p>
 
+<p>
+  <b>Status:</b>
+  <%= @application.status %>
+</p>
 
+
+<% if current_registrar %>
+ <%= link_to 'Approve', :controller => 'applications', :action => 'approve' %> |
+<% end %>
+<% if current_registrar %>
+ <%= link_to 'Decline', :controller => 'applications', :action => 'decline' %> |
+<% end %>
+<% if can? :update, @application %>
 <%= link_to 'Edit', edit_application_path(@application) %> |
+<% end %>
+<% if can? :destroy, @application %>
 <%= link_to 'Back', applications_path %>
+<% end %>

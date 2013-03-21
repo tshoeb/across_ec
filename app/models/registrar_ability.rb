@@ -10,6 +10,8 @@ class RegistrarAbility < ActiveRecord::Base
          can :read, Student, :university_id => user.university_id
          can :read, Application, :university_id => user.university_id
          can :read, University
+         can :approve, Application
+         can :decline, Application
         end
     end
 end
