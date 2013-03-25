@@ -90,6 +90,7 @@ class ApplicationsController < ApplicationController
   def approve
     application = Application.find(params[:id])
     application.update_attributes(:status => 'approved')
+    StudentMailer.application_approved(@application.student, @application).deliver
     redirect_to application_path(application)
   end
   def decline

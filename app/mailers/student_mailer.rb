@@ -9,4 +9,9 @@ class StudentMailer < ActionMailer::Base
   	@student = student
   	mail(:from => "across.ec@gmail.com", :to => student.email, :subject => "Application Confirmation")
   end
+  def application_approved(student, application)
+  	@student = student
+  	@application = application
+  	mail(:from => "across.ec@gmail.com", :to => student.email, :subject => "Application Approved")
+  end
 end
