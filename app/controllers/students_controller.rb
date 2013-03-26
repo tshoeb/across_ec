@@ -17,7 +17,12 @@ class StudentsController < ApplicationController
   # GET /students/1.json
   def show
     @title = "Student"
-    @student = Student.find(params[:id])
+    #@student = Student.find(params[:id])
+    if params[:id].nil?
+      @student = current_student
+    else 
+      @student = Student.find params[:id]
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -51,6 +56,7 @@ class StudentsController < ApplicationController
     respond_to do |format|
       if @student.save
         StudentMailer.registration_confirmation(@student).deliver
+        session[:student_id] = @student.id
         format.html { redirect_to @student, notice: 'Successfully registered' }
         format.json { render json: @student, status: :created, location: @student }
       else

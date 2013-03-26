@@ -31,6 +31,12 @@
 </p>
 
 <p>
+  <b>University:</b>
+  <% temp = @student.university_id %>
+  <%= University.find(temp).name %>
+</p>
+
+<p>
   <b>Year of graduation:</b>
   <%= @student.year_of_graduation %>
 </p>

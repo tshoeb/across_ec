@@ -49,6 +49,7 @@ class RegistrarsController < ApplicationController
 
     respond_to do |format|
       if @registrar.save
+        session[:registrar_id] = @registrar.id
         format.html { redirect_to @registrar, notice: 'Registrar was successfully created.' }
         format.json { render json: @registrar, status: :created, location: @registrar }
       else

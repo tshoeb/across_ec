@@ -12,17 +12,18 @@
 
 <p>
   <b>University:</b>
-  <%= @application.university_id %>
+  <% temp = @application.university_id %>
+  <%= University.find(temp).name %>
 </p>
 
 <p>
   <b>Passport copy:</b>
-  <%= @application.passport_copy %>
+  <%= link_to 'view', @application.passport_copy.url %>
 </p>
 
 <p>
   <b>Sign form:</b>
-  <%= @application.sign_form %>
+  <%= link_to 'view', @application.sign_form.url %>
 </p>
 
 <p>
@@ -31,8 +32,8 @@
 </p>
 
 <p>
-  <b>Registrar:</b>
-  <%= @application.registrar_id %>
+  <b>Student Number:</b>
+  <%= @application.student.student_number %>
 </p>
 
 <p>
@@ -42,10 +43,10 @@
 
 
 <% if current_registrar %>
- <%= link_to 'Approve', :controller => 'applications', :action => 'approve' %> |
+ <%= button_to 'Approve', :controller => 'applications', :action => 'approve' %>
 <% end %>
 <% if current_registrar %>
- <%= link_to 'Decline', :controller => 'applications', :action => 'decline' %> |
+ <%= button_to 'Decline', :controller => 'applications', :action => 'decline' %>
 <% end %>
 <% if can? :update, @application %>
 <%= link_to 'Edit', edit_application_path(@application) %> |
