@@ -40,8 +40,6 @@
     <th>Application date</th>
     <th>Course no</th>
     <th>University</th>
-    <th>Passport Copy</th>
-    <th>Sign Form</th>
     <th>Semester year</th>
     <th>Status</th>
     <th></th>
@@ -54,8 +52,6 @@
     <td><%= application.application_date %></td>
     <td><%= application.course_no %></td>
     <td><%= application.university_id %></td>
-    <td><%= application.passport_copy %></td>
-    <td><%= application.sign_form %></td>
     <td><%= application.semester_year %></td>
     <td><%= application.status %></td>
     <% if can? :read, application %>
