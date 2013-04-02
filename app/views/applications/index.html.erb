@@ -1,6 +1,9 @@
-<h1>Listing applications</h1>
+
+
 <% if current_student != nil %>
+
 <table>
+
   <tr>
     <th>Application date</th>
     <th>Course no</th>
@@ -11,6 +14,7 @@
     <th></th>
     <th></th>
   </tr>
+
 
 <% @applications.each do |application| %>
   <tr>
@@ -35,11 +39,14 @@
 </table>
 <% end %>
 <% if current_registrar != nil %>
+
 <table>
   <tr>
     <th>Application date</th>
     <th>Course no</th>
     <th>University</th>
+    <th>Passport Copy</th>
+    <th>Sign Form</th>
     <th>Semester year</th>
     <th>Status</th>
     <th></th>
@@ -49,11 +56,15 @@
 <% @applications.each do |application| %>
   <tr>
     <% if current_registrar.university_id == application.university_id || current_registrar.admin? %>
+
     <td><%= application.application_date %></td>
     <td><%= application.course_no %></td>
     <td><%= application.university_id %></td>
+    <td><%= application.passport_copy %></td>
+    <td><%= application.sign_form %></td>
     <td><%= application.semester_year %></td>
     <td><%= application.status %></td>
+
     <% if can? :read, application %>
     <td><%= link_to 'Show', application %></td>
     <% end %>
@@ -67,6 +78,7 @@
   </tr>
 <% end %>
 </table>
+
 <% end %>
 
 <br />
