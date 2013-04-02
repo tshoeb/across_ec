@@ -99,4 +99,5 @@ class ApplicationsController < ApplicationController
 	StudentMailer.application_declined(@application.student, @application).deliver
     redirect_to application_path(application)
   end
+
 end
