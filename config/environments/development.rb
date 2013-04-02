@@ -41,7 +41,7 @@ AcrossEc::Application.configure do
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => 'www.mail.google.com',
-    :authentication => :login,
+    :authentication => :plain,
     :user_name => 'across.ec',
     :password => 'across_ec123'
   }
