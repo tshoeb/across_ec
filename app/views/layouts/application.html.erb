@@ -4,8 +4,8 @@
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
 
-
   <%= csrf_meta_tags %>
+  <title><%=h @title %></title>
 
 </head>
 <body>
@@ -17,7 +17,7 @@
 	</div>
 <div id="container" width="900" height="780">	
 <div id="images">
-			<img src="http://i45.tinypic.com/beyl3b.jpg" width="900" height="780">
+			<img src="http://i47.tinypic.com/rs4dwj.jpg" width="900" height="780">
 			</div>
 			</div>
 
@@ -30,11 +30,11 @@
 	    <div id="demo-1" class="demobox">
 		<div id="logo">
 		<%= link_to image_tag('http://i49.tinypic.com/2ef2uza.gif'),  :controller => 'pages', :action => 'home', :options => {:style =>"height: 100px;"}%> </div>
-		<% if current_student == nil && current_registrar == nil %>
 		<div id="log_link">
 			<%= button_to 'Log In', :controller => 'sessions_students', :action => 'new' %>
+		 
 			</div>
-		<% end %>
+			<p> </p>
 		 <% if current_registrar %>	
 
 <div id="registrar_student">
@@ -54,11 +54,15 @@
 		<%= button_to "Log out", '/studentlogout' %>
 </div>
 		<% end %>
-
+		<% if (current_student == false) && (current_registrar == false) %>
+				<div id="log_in">
+				<li><a href="#" STYLE="TEXT-DECORATION: NONE">Log in</a></li>
+				</div>
+		<% end %>
 				</div>
 
 
-<p> </p>
+
 			 <nav>
 			       <ul id="top_nav" class="clearfix">
 
@@ -72,16 +76,12 @@
 					<% if current_registrar %>
 					<li><a href="/applications">ViewApplications </a></li>
 					<% else %>
-					<% if current_student %>
-					<li><a href="/applications">ApplicationStatus</a></li>
-					<% else %>
-					<li><a href="/loginasstudent">ApplicationStatus</a></li>
+					<li><a href="#status">ApplicationStatus</a></li>
 					<% end %>
-					<% end %>
-					<li><%= link_to 'Signature form', '/resource/test_file.pdf' -%></li>
-					<% if current_student == nil && current_registrar == nil %>
-					<li><a href="/loginasregistrar">Registrars Log in</a></li> 
-					<% end %>
+					<li><a href="#">Have Questions</a></li>
+				
+						<li><a href="/loginasregistrar">Registrars Log in</a></li> 
+				
 			       </ul>
 			</nav>
 
