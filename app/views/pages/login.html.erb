@@ -1,4 +1,7 @@
-
+<table width="1000px" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+	<td width="350px" valign="top">
+            
 <%= form_tag sessions_students_path do %>
 <div id="second_column">
   <div class="login">
@@ -11,14 +14,15 @@
     <%= password_field_tag :password %>
   </div>
    <div class="actions"><%= submit_tag "Log in" %></div>
-<div id="Signup">
-<br><br>
-    <p> Don't have an account? <%= link_to "Sign Up", new_student_path %> </p>
-	</div>
+
 	</div>
 </div>
  <% end %>
 
+</td>
+
+        <td width="350px" valign="top">
+		
 <%= form_tag sessions_path do %>
 <div id="second_column">
   <div class="login">
@@ -36,4 +40,11 @@
   </div>
 <% end %>
 
+        </td>
+    </tr>
+</table>
 
+<div id="Signup">
+
+    <p> Don't have an account? <%= link_to "Sign Up", new_student_path %> </p>
+	</div>
