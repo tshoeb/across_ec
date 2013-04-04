@@ -61,6 +61,8 @@
 
 					<% if current_student %>
 					<li><a href="/applications/new">Apply </a></li>
+					<% elsif current_registrar %>
+					<li><a href="/students">Students </a></li>
 					<% else %>
 					<li><a href="/loginasstudent">Apply</a></li>
 					<% end %>				   
