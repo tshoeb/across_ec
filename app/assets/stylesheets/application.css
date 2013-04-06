@@ -5,20 +5,15 @@ body {
 }
 
 
-footer {
-
-	position: fixed;
-}
 #log_in
 {
 	margin-top: -30px;
 	margin-right: 80px;
 	float: right;
 	font-size: 30px;
-	 color: #098642;
-	
+	color: #098642;
 	width: 100px;
-list-style: none;
+	list-style: none;
 
 	
 }
