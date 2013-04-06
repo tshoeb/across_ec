@@ -16,6 +16,7 @@ AcrossEc::Application.routes.draw do
   match '/studentlogout', :to => 'sessions_students#destroy'
   match '/applications/:id/approve', :to => 'applications#approve'
   match '/applications/:id/decline', :to => 'applications#decline'
+  match '/login', :to => 'pages#login'
 
   resources :universities
   resources :schedules

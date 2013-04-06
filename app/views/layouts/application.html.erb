@@ -16,7 +16,7 @@
 
 	</div>
 <div id="container" width="900" height="780">	
-<div id="images">
+        <div id="images">
 			<img src="http://i45.tinypic.com/beyl3b.jpg" width="900" height="780">
 			</div>
 			</div>
@@ -40,6 +40,9 @@
 			<%= button_to 'Log In', :controller => 'sessions_students', :action => 'new' %>
 			</div>
 		<% end %>
+
+		<!-- <%= link_to image_tag('http://i49.tinypic.com/2ef2uza.gif'),  :controller => 'pages', :action => 'home', :options => {:style =>"height: 100px;"}%> </div> --> 
+
 		 <% if current_registrar %>	
 
 <div id="registrar_student">
@@ -67,13 +70,15 @@
 			 <nav>
 			       <ul id="top_nav" class="clearfix">
 
-				
-					<li><a href="/schedules">View Schedule</a></li>
+
 					<% if current_student %>
 					<li><a href="/applications/new">Apply </a></li>
+					<% elsif current_registrar %>
+					<li><a href="/students">Students </a></li>
 					<% else %>
 					<li><a href="/loginasstudent">Apply</a></li>
-					<% end %>
+					<% end %>				   
+					<li><a href="/schedules">View Schedule</a></li>
 					<% if current_registrar %>
 					<li><a href="/applications">ViewApplications </a></li>
 					<% else %>
@@ -83,9 +88,9 @@
 					<li><a href="/loginasstudent">ApplicationStatus</a></li>
 					<% end %>
 					<% end %>
-					<li><%= link_to 'Signature form', '/resource/test_file.pdf' -%></li>
+					<li><%= link_to 'Signature form', '/resource/form.pdf' -%></li>
 					<% if current_student == nil && current_registrar == nil %>
-					<li><a href="/loginasregistrar">Registrars Log in</a></li> 
+					<li><a href="/login">Log in</a></li> 
 					<% end %>
 			       </ul>
 			</nav>
