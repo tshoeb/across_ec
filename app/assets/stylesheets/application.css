@@ -4,6 +4,11 @@ body {
 		font-family: 'Julius Sans One', sans-serif;
 }
 
+
+footer {
+
+	position: fixed;
+}
 #log_in
 {
 	margin-top: -30px;
@@ -11,7 +16,7 @@ body {
 	float: right;
 	font-size: 30px;
 	 color: #098642;
-	font-weight: bold;
+	
 	width: 100px;
 list-style: none;
 
@@ -265,11 +270,11 @@ h3
 }
 
 #logo_footer { 
-margin-top: -29px;
 float: left;
 position: relative;
 margin-left: 15%;
 }
+
 
 	
 	#second_column{
@@ -278,6 +283,14 @@ margin-top: 14%;
 float: left; 
 width: 15%;
 }
+
+
+.login label {
+
+	text-align: none;
+	font-weight: none; 
+
+  }
 
 .login {       /*log in button */
 position:relative;
@@ -389,7 +402,7 @@ font-size:15px;
 
 td
 {
-	font-weight: bold;
+	
 	overflow: hidden;
 	max-width:80px;
 	max-height:80px;
@@ -474,11 +487,11 @@ border-radius: 4px;
 	color: black;
 	font-size: 15px; 
 }
-#error_explanation{
+#error_explanation {
 
 	width: 400px;
 	float: right;
-	margin-right: 130px;
+	margin-right: 70px;
 }
 
 .field_with_errors { display: inline; }
@@ -496,11 +509,6 @@ table, td, th
 border:1px solid black;
 }
 */
-td
-{
-
-text-align:center;
-}
 
 
 table.gridtable {
