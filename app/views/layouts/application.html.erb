@@ -29,9 +29,14 @@
 
 	    <div id="demo-1" class="demobox">
 		<div id="logo">
-		<%= link_to image_tag('http://i49.tinypic.com/2ef2uza.gif'),  :controller => 'pages', :action => 'home', :options => {:style =>"height: 100px;"}%> </div>
+		
+		<%= link_to image_tag('http://i49.tinypic.com/24cdqpl.gif'),  :controller => 'pages', :action => 'home', :options => {:style =>"height: 100px;"}%> 
+		</div>
+
+
 		<% if current_student == nil && current_registrar == nil %>
 		<div id="log_link">
+
 			<%= button_to 'Log In', :controller => 'sessions_students', :action => 'new' %>
 			</div>
 		<% end %>
