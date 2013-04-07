@@ -591,27 +591,20 @@ background: rgba(0, 0, 0, 0.08);
 border-radius: 4px;
 }
 
-#log_link
-{float:right;
-	color:black;
-	width: 200px;
-	font-size:22px;
-	margin-top:-50px;}
-
-
-
 .back_b {
 
 	margin-top: -30px; 
 }
 
-#doublelogin {
-
-
-margin-top: 20px; 
-}
 
 #first_logS{
 
-	margin-left: 30px;
+margin-left: 45px;
+margin-top: 20px;
+}
+
+#second_logR{
+
+margin-left: 45px;
+margin-top: 20px;
 }

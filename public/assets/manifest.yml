@@ -35,13 +35,8 @@ trans-grey.gif: trans-grey-b2440fb3fac1d26a789d67ccd1bb8446.gif
 trans-grey/index.gif: trans-grey-b2440fb3fac1d26a789d67ccd1bb8446.gif
 application.js: application-6d9916a0503892145352fb1578235ab9.js
 application/index.js: application-6d9916a0503892145352fb1578235ab9.js
-<<<<<<< HEAD
-application.css: application-5d86d70d7f50e1afa5bde3286a4b459c.css
-application/index.css: application-5d86d70d7f50e1afa5bde3286a4b459c.css
-=======
-application.css: application-897ba3a0b9764c71cc4d3699ba1826b4.css
-application/index.css: application-897ba3a0b9764c71cc4d3699ba1826b4.css
->>>>>>> style6april
+application.css: application-b3684e73a64ca2d71744ae1a5e932e97.css
+application/index.css: application-b3684e73a64ca2d71744ae1a5e932e97.css
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings-white/index.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings.png: glyphicons-halflings-2851b489e8c39f8fad44fc10efb99c3e.png
