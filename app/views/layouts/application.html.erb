@@ -37,7 +37,7 @@
 		<% if current_student == nil && current_registrar == nil %>
 		<div id="log_link">
 
-			<%= button_to 'Log In', :controller => 'sessions_students', :action => 'new' %>
+			<%= link_to 'Log In', :controller => 'sessions_students', :action => 'new'%>
 			</div>
 		<% end %>
 
