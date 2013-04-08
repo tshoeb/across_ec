@@ -176,9 +176,9 @@ font-size:12px
 
 
 #top_nav {
-position:fixed;
 margin-top: 0.5%;
 margin-left: 5%;
+width: 800px; 
 }
 ul#top_nav li {
 	font-family: 'Julius Sans One', sans-serif;
