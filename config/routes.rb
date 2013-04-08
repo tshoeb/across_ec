@@ -1,5 +1,9 @@
 AcrossEc::Application.routes.draw do
 
+  get "registration_confirmation/new"
+
+  get "password_resets/new"
+
   get "pages/home"
 
   get "pages/about"
@@ -25,6 +29,8 @@ AcrossEc::Application.routes.draw do
   resources :students
   resources :sessions_students
   resources :applications
+  resources :password_resets
+  resources :registration_confirmation
 
 
   # The priority is based upon order of creation:

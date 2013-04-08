@@ -18,4 +18,24 @@ class Student < ActiveRecord::Base
   def proper_name
     first_name + " " + last_name
   end
+  
+  def send_password_reset
+	  generate_token(:password_reset_token)
+	  self.password_reset_sent_at = Time.zone.now
+	  save!
+	  StudentMailer.password_reset(self).deliver
+  end
+	
+  def send_registration_confirmation
+	  generate_token(:registration_confirmation_token)
+	  self.password_reset_sent_at = Time.zone.now
+	  save!
+	  StudentMailer.registration_confirmation(self).deliver
+  end
+	
+    def generate_token(column)
+		begin
+		  self[column] = SecureRandom.urlsafe_base64
+		end while Student.exists?(column => self[column])
+    end
 end

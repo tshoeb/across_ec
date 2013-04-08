@@ -2,7 +2,7 @@ Hello <%= @student.proper_name %>
 
 Thank you for registring on Across EC.
 
-
+<%= edit_registration_confirmation_url(@student.registration_confirmation_token) %>
 
 Please don't reply to this email, it's just a confirmation email.
 Thanks,

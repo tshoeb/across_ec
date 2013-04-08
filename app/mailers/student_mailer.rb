@@ -19,4 +19,8 @@ class StudentMailer < ActionMailer::Base
   	@application = application
   	mail(:from => "across.ec@gmail.com", :to => student.email, :subject => "Application Declined")
   end
+  def password_reset(student)
+    @student = student
+    mail(:from => "across.ec@gmail.com", :to => student.email, :subject => "Password Reset")
+  end
 end
