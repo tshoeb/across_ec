@@ -4,16 +4,21 @@ body {
 		font-family: 'Julius Sans One', sans-serif;
 }
 
+footer {
+
+
+	width: 1000px; 
+}
+
 #log_in
 {
 	margin-top: -30px;
 	margin-right: 80px;
 	float: right;
 	font-size: 30px;
-	 color: #098642;
-	font-weight: bold;
+	color: #098642;
 	width: 100px;
-list-style: none;
+	list-style: none;
 
 	
 }
@@ -22,7 +27,8 @@ list-style: none;
 padding:-50px; 
 margin-left: 18%;
 margin-right: 10%;
-height: 700px; 
+height: 700px;
+width: 800px; 
 top: 150px;
 }
 
@@ -49,7 +55,7 @@ margin-top: 2%;
 	z-index: -1;
 	opacity: 0.6;
 	border: none;
-	top: 180px;
+	top: 160px;
 }
 #content
 	{
@@ -170,9 +176,9 @@ font-size:12px
 
 
 #top_nav {
-
 margin-top: 0.5%;
 margin-left: 5%;
+width: 800px; 
 }
 ul#top_nav li {
 	font-family: 'Julius Sans One', sans-serif;
@@ -238,14 +244,14 @@ ul#top_nav li a:active  {
 
 #second_nav{
 	font-family: 'Julius Sans One', sans-serif;
-margin-top: 19%; 
+margin-top: 25%; 
 margin-left: 40%; 
 /* height:40px;
 width:800px; */ 
 color: white;
 text-align: left;
 list-style: none;
-
+width: 900px;
 
 }
  #second_nav li a:link {
@@ -265,7 +271,6 @@ h3
 }
 
 #logo_footer { 
-margin-top: -29px;
 float: left;
 position: relative;
 margin-left: 15%;
@@ -278,6 +283,14 @@ margin-top: 14%;
 float: left; 
 width: 15%;
 }
+
+
+.login label {
+
+	text-align: none;
+	font-weight: none; 
+
+  }
 
 .login {       /*log in button */
 position:relative;
@@ -293,9 +306,9 @@ box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
 height:150px;
 
 }
+
 #signup
 {
-	margin-left:-30px;
 }
 
 
@@ -389,7 +402,7 @@ font-size:15px;
 
 td
 {
-	font-weight: bold;
+	
 	overflow: hidden;
 	max-width:80px;
 	max-height:80px;
@@ -457,13 +470,6 @@ background: rgba(0, 0, 0, 0.08);
 border-radius: 4px;
 }
 
-#log_link
-{float:right;
-	color:black;
-	width: 200px;
-	font-size:22px;
-	margin-top:-50px}
-
 #error_explanation h2 {
 
 	font-size: 20px; 
@@ -474,11 +480,11 @@ border-radius: 4px;
 	color: black;
 	font-size: 15px; 
 }
-#error_explanation{
+#error_explanation {
 
 	width: 400px;
 	float: right;
-	margin-right: 130px;
+	margin-right: 70px;
 }
 
 .field_with_errors { display: inline; }
@@ -496,11 +502,6 @@ table, td, th
 border:1px solid black;
 }
 */
-td
-{
-
-text-align:center;
-}
 
 
 table.gridtable {
@@ -586,10 +587,20 @@ background: rgba(0, 0, 0, 0.08);
 border-radius: 4px;
 }
 
-#log_link
-{float:right;
-	color:black;
-	width: 200px;
-	font-size:22px;
-	margin-top:-50px}
+.back_b {
 
+	margin-top: -30px; 
+}
+
+
+#first_logS{
+
+margin-left: 41px;
+margin-top: 50px;
+}
+
+#second_logR{
+
+margin-top: 50px;
+margin-left: -9px;
+}

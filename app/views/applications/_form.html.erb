@@ -1,7 +1,7 @@
 <%= form_for @application, :html =>{ :multipart => true } do |f| %>
   <% if @application.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
+      <h2><%= pluralize(@application.errors.count, "error") %>, can you please complete the required fields</h2>
 
       <ul>
       <% @application.errors.full_messages.each do |msg| %>

@@ -3,8 +3,6 @@
 <head>
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
-
-
   <%= csrf_meta_tags %>
 
 </head>
@@ -16,7 +14,7 @@
 
 	</div>
 <div id="container" width="900" height="780">	
-<div id="images">
+        <div id="images">
 			<img src="http://i45.tinypic.com/beyl3b.jpg" width="900" height="780">
 			</div>
 			</div>
@@ -29,7 +27,16 @@
 
 	    <div id="demo-1" class="demobox">
 		<div id="logo">
-		<%= link_to image_tag('http://i49.tinypic.com/2ef2uza.gif'),  :controller => 'pages', :action => 'home', :options => {:style =>"height: 100px;"}%> </div>
+		
+		<%= link_to image_tag('http://i49.tinypic.com/24cdqpl.gif'),  :controller => 'pages', :action => 'home', :options => {:style =>"height: 100px;"}%> 
+		</div>
+
+
+		<% if current_student == nil && current_registrar == nil %>
+		
+		<% end %>
+
+		<!-- <%= link_to image_tag('http://i49.tinypic.com/2ef2uza.gif'),  :controller => 'pages', :action => 'home', :options => {:style =>"height: 100px;"}%> </div> --> 
 
 		 <% if current_registrar %>	
 
@@ -66,17 +73,17 @@
 					<% else %>
 					<li><a href="/loginasstudent">Apply</a></li>
 					<% end %>				   
-					<li><a href="/schedules">View Schedule</a></li>
+					<li><a href="/schedules">Schedule</a></li>
 					<% if current_registrar %>
-					<li><a href="/applications">ViewApplications </a></li>
+					<li><a href="/applications">Applications </a></li>
 					<% else %>
 					<% if current_student %>
-					<li><a href="/applications">ApplicationStatus</a></li>
+					<li><a href="/applications">Status</a></li>
 					<% else %>
-					<li><a href="/loginasstudent">ApplicationStatus</a></li>
+					<li><a href="/loginasstudent">Status</a></li>
 					<% end %>
 					<% end %>
-					<li><%= link_to 'Signature form', '/resource/form.pdf' -%></li>
+					<li><%= link_to 'Forms', '/resource/form.pdf' -%></li>
 					<% if current_student == nil && current_registrar == nil %>
 					<li><a href="/login">Log in</a></li> 
 					<% end %>
