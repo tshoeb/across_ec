@@ -78,17 +78,17 @@
 					<% else %>
 					<li><a href="/loginasstudent">Apply</a></li>
 					<% end %>				   
-					<li><a href="/schedules">View Schedule</a></li>
+					<li><a href="/schedules">Schedule</a></li>
 					<% if current_registrar %>
-					<li><a href="/applications">ViewApplications </a></li>
+					<li><a href="/applications">Applications </a></li>
 					<% else %>
 					<% if current_student %>
-					<li><a href="/applications">ApplicationStatus</a></li>
+					<li><a href="/applications">Status</a></li>
 					<% else %>
-					<li><a href="/loginasstudent">ApplicationStatus</a></li>
+					<li><a href="/loginasstudent">Status</a></li>
 					<% end %>
 					<% end %>
-					<li><%= link_to 'Signature form', '/resource/form.pdf' -%></li>
+					<li><%= link_to 'Forms', '/resource/form.pdf' -%></li>
 					<% if current_student == nil && current_registrar == nil %>
 					<li><a href="/login">Log in</a></li> 
 					<% end %>
