@@ -14,5 +14,6 @@ class StudentAbility < ActiveRecord::Base
      # can :edit, Application, :student_id => user.id
      # can :destroy, Application, :student_id => user.id
       can :read, University
+	  can :confirm_account, Student
   end
 end

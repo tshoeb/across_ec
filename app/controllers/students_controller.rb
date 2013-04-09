@@ -93,4 +93,16 @@ class StudentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def confirm_account
+	@student = Student.find(params[:id])
+	@login_student = Student.find_by_confirmation_code!(params[:code])
+	if @student == @login_student
+		@student.active = true
+		@student.save
+		session[:student_id] = @student.id
+		redirect_to @student, notice: 'Account successfully confirmed'
+	else
+		redirect_to root_path, notice: 'Sorry may be your link expired or you did not sign in.'
+	end
+  end
 end

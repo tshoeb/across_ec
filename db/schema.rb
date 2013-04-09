@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -12,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130408135734) do
+ActiveRecord::Schema.define(:version => 20130409114119) do
 
   create_table "applications", :force => true do |t|
     t.date     "application_date"
@@ -68,15 +67,14 @@ ActiveRecord::Schema.define(:version => 20130408135734) do
     t.string   "mobile"
     t.string   "major"
     t.date     "year_of_graduation"
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.string   "password_digest"
     t.integer  "university_id"
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
     t.boolean  "active"
-    t.string   "registration_confirmation_token"
-    t.datetime "registration_confirmation_sent_at"
+    t.string   "confirmation_code"
   end
 
   create_table "universities", :force => true do |t|
@@ -86,87 +84,3 @@ ActiveRecord::Schema.define(:version => 20130408135734) do
   end
 
 end
-=======
-# encoding: UTF-8
-# This file is auto-generated from the current state of the database. Instead
-# of editing this file, please use the migrations feature of Active Record to
-# incrementally modify your database, and then regenerate this schema definition.
-#
-# Note that this schema.rb definition is the authoritative source for your
-# database schema. If you need to create the application database on another
-# system, you should be using db:schema:load, not running all the migrations
-# from scratch. The latter is a flawed and unsustainable approach (the more migrations
-# you'll amass, the slower it'll run and the greater likelihood for issues).
-#
-# It's strongly recommended to check this file into your version control system.
-
-ActiveRecord::Schema.define(:version => 20130321064119) do
-
-  create_table "applications", :force => true do |t|
-    t.date     "application_date"
-    t.string   "course_no"
-    t.integer  "university_id"
-    t.string   "passport_copy"
-    t.string   "sign_form"
-    t.string   "semester_year"
-    t.integer  "registrar_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.integer  "student_id"
-    t.string   "status"
-  end
-
-  create_table "registrar_abilities", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "registrars", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.string   "phone"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-    t.string   "password_digest"
-    t.boolean  "admin"
-    t.integer  "university_id"
-  end
-
-  create_table "schedules", :force => true do |t|
-    t.string   "file_name"
-    t.date     "date_uploaded"
-    t.string   "schedule"
-    t.string   "semester_year"
-    t.integer  "registrar_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  create_table "student_abilities", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "students", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.integer  "student_number"
-    t.string   "mobile"
-    t.string   "major"
-    t.date     "year_of_graduation"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.string   "password_digest"
-    t.integer  "university_id"
-  end
-
-  create_table "universities", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-end
->>>>>>> hmabdull-master
