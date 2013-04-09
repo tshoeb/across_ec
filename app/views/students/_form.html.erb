@@ -56,11 +56,15 @@
     <%= f.label :year_of_graduation %><br />
     <%= f.date_select :year_of_graduation , :class => 'inside'%>
   </div>
+ <% if current_student %>
+ <% if @student.active == false %>
 <br>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email , :class => 'inside'%>
   </div>
+  <% end %>
+  <% end %>
 <br>
   <div class="field">
     <%= f.label :password %><br />

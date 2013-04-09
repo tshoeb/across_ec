@@ -1,0 +1,20 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<p>
+  <b>Semester:</b>
+  <%= @deadline.semester %>
+</p>
+
+<p>
+  <b>Start of registration:</b>
+  <%= @deadline.start_of_registration %>
+</p>
+
+<p>
+  <b>Start of classes:</b>
+  <%= @deadline.start_of_classes %>
+</p>
+
+
+<%= link_to 'Edit', edit_deadline_path(@deadline) %> |
+<%= link_to 'Back', deadlines_path %>

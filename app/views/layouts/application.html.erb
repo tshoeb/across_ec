@@ -8,11 +8,18 @@
 </head>
 <body>
 	<div id="flash_error">
-		<p class= "flash-error"><%= flash[:alert] %></p>
+		<p class= "flash-error"><%= flash[:error] %></p>
 
 		<p class= "flash-notice"><%= flash[:notice] %></p>
+		
+	<% if current_student %>	
+	<% if current_student.active == false %>
+	<p> Please confirm your account!! </p>
+	<% end %>
+	<% end %>
 
 	</div>
+
 <div id="container" width="900" height="780">	
         <div id="images">
 			<img src="http://i45.tinypic.com/beyl3b.jpg" width="900" height="780">
@@ -86,6 +93,11 @@
 					<li><%= link_to 'Forms', '/resource/form.pdf' -%></li>
 					<% if current_student == nil && current_registrar == nil %>
 					<li><a href="/login">Log in</a></li> 
+					<% end %>
+					<% if current_registrar %>
+					<% if current_registrar.admin == true %>
+					<li><a href="/deadlines">Deadlines</a></li>
+					<% end %>
 					<% end %>
 			       </ul>
 			</nav>

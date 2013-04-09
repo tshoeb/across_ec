@@ -9,11 +9,13 @@ class StudentAbility < ActiveRecord::Base
       can :destroy, Student, :id => user.id
       can :read, Registrar
       can :read, Schedule
-      can :create, Application
-      can :read, Application, :student_id => user.id
-     # can :edit, Application, :student_id => user.id
-     # can :destroy, Application, :student_id => user.id
-      can :read, University
 	  can :confirm_account, Student
+	  can :read, University
+	  if user.active == true
+		can :create, Application
+		can :read, Application, :student_id => user.id
+		# can :edit, Application, :student_id => user.id
+		# can :destroy, Application, :student_id => user.id
+	  end
   end
 end

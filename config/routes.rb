@@ -1,5 +1,8 @@
 AcrossEc::Application.routes.draw do
 
+  resources :deadlines
+
+
   get "registration_confirmation/new"
 
   get "password_resets/new"
