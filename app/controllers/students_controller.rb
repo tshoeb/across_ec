@@ -70,9 +70,14 @@ class StudentsController < ApplicationController
   # PUT /students/1.json
   def update
     @student = Student.find(params[:id])
-
+		oldemail = @student.email
     respond_to do |format|
       if @student.update_attributes(params[:student])
+		newemail = @student.email
+		if oldemail != newemail
+			@student.set_confirmation_code
+			StudentMailer.registration_confirmation(@student).deliver
+		end
         format.html { redirect_to @student, notice: 'Student was successfully updated.' }
         format.json { head :no_content }
       else
