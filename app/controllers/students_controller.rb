@@ -76,6 +76,7 @@ class StudentsController < ApplicationController
 		newemail = @student.email
 		if oldemail != newemail
 			@student.set_confirmation_code
+			save!
 			StudentMailer.registration_confirmation(@student).deliver
 		end
         format.html { redirect_to @student, notice: 'Student was successfully updated.' }
