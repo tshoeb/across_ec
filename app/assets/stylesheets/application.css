@@ -1,3 +1,6 @@
+html {
+	width: 100%;
+}
 body {
 	background-image:url(http://i49.tinypic.com/333wlk5.jpg); 
 		/*http://s12.postimg.org/p41iooa9p/background.jpg');*/ 
@@ -35,7 +38,6 @@ top: 150px;
 
 #logo { 
 margin-left: -9%;
-/* margin-bottom: 7%;*/ 
 margin-top: 2%;
 
 
@@ -85,64 +87,7 @@ a:active {color:grey;}  /* selected link */
 a::link {text-decoration: none}
 
 
-#circle {
-	color: white;
-	text-align: center;
-	float: right;
-    background: black;
-   width: 230px;
-    height: 40px;
 
-}
-
-#listings
-{
-	font-family: 'Julius Sans One', sans-serif;	
-}
-#squareNav {
-		font-family: 'Julius Sans One', sans-serif;
-	color: white;
-	text-align: center;
-	float: left;
-    background: black;
-    width: 200px;
-    height: 40px;
-
-}
-
-#squareNav_ev{
-	color: white;
-	text-align: center;
-	float: left;
-	
-    background: black;
-    width: 40px;
-    height: 40px;
-
-}
-#circleNav {
-	color: white;
-	text-align: center;
-	float: left;
-	margin-left: 3%; 
-    background: black;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    
-}
-
-#first_column{
-	padding:-30px;
-	font-size:18px;
-		font-family: 'Julius Sans One', sans-serif;
- margin-top: 7%; 
-margin-left: 2%;
-
-float: left; 
-width: 70%;
-
-}
 
 
 
@@ -152,26 +97,6 @@ margin-top: -29%;
 margin-left: 650px;
 width: 200px;
 font-size:12px
-}
-
-
-
-#demo-1 {
-
-	-webkit-transform: scale(1);
-	-webkit-transition-timing-function: ease-out;
-	-webkit-transition-duration: 500ms;
-}
-#demo-1 #circleNav:hover{
-	-webkit-transform: scale(1.5);
-	-webkit-transition-timing-function: ease-out;
-	-webkit-transition-duration: 500ms;
-}
-
-#demo-1 #squareNav:hover{
-	-webkit-transform: scale(1.5);
-	-webkit-transition-timing-function: ease-out;
-	-webkit-transition-duration: 500ms;
 }
 
 
@@ -205,6 +130,7 @@ ul#top_nav li {
   background-image: -ms-linear-gradient(top, #535357, #757575);
   background-image: -webkit-linear-gradient(top, #535357, #757575);
   background-image: linear-gradient(top, #535357, #757575);
+
   
   -webkit-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.2), 0 1px 0px #575757;
      -moz-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.2), 0 1px 0px #575757;
@@ -294,8 +220,8 @@ width: 15%;
 
 .login {       /*log in button */
 position:relative;
-left:10px;
-top:-50px;
+left:50px;
+top:-88px;
 margin: 0 auto;
 padding: 20px 20px 20px;
 width: 255px;
@@ -305,10 +231,6 @@ border-radius: 3px;
 box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
 height:150px;
 
-}
-
-#signup
-{
 }
 
 
@@ -356,6 +278,14 @@ width: 230px;
 text-align: right;
 font-size:15px;
 }
+
+#reset {
+
+margin-top: 150px;
+float: left;
+margin-left: 14px;}
+
+
 
 #actions
 {
@@ -417,7 +347,7 @@ td
 margin-left: 65px; */ 
 margin-top: 80px;
 position:relative;
-left:70px;
+left:64px;
 top: 4px;
 padding: 20px 20px 20px;
 width: 330px;
@@ -482,9 +412,10 @@ border-radius: 4px;
 }
 #error_explanation {
 
-	width: 400px;
-	float: right;
-	margin-right: 70px;
+width: 311px;
+float: right;
+margin-right: 10px;
+margin-top: 13px;
 }
 
 .field_with_errors { display: inline; }
@@ -589,18 +520,37 @@ border-radius: 4px;
 
 .back_b {
 
-	margin-top: -30px; 
+	margin-right: 30px;
+	float: right;
+	margin-top: -371px;
 }
 
 
 #first_logS{
 
-margin-left: 41px;
-margin-top: 50px;
+margin-top: 77px;
 }
 
 #second_logR{
 
-margin-top: 50px;
-margin-left: -9px;
+margin-top: 77px;
+margin-left: -45px;
+}
+
+.sign_forg {
+
+margin-left: 70px;
+margin-top: -82px;
+font-size: 16px;
+}
+
+
+#notifi {
+
+	margin-top: 90px;
+float: left;
+margin-left: 140px;
+width: 300px;
+height: 400px;
+
 }

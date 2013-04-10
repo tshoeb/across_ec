@@ -1,9 +1,25 @@
+
+<div id="reset">
+	<div class="login">
+
+
 <h1>Reset Password</h1>
 
+<p>Want to reset your password? Please enter your email below</p>
 <%= form_tag password_resets_path, :method => :post do %>
   <div class="field">
-    <%= label_tag :email %>
+    <%= label_tag :email %> 
     <%= text_field_tag :email, params[:email] %>
   </div>
   <div class="actions"><%= submit_tag "Reset Password" %></div>
 <% end %>
+
+</div> 
+
+</div> 
+
+<div id="notifi">
+<p> Reseting your password, you will receive an email notification with the following steps. </p>
+
+<p> And this should be longer, we need more text, and yeah I am talking to my self =S </p>
+	</div> 
