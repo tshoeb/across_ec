@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321064119) do
+ActiveRecord::Schema.define(:version => 20130409114119) do
 
   create_table "applications", :force => true do |t|
     t.date     "application_date"
@@ -67,10 +67,14 @@ ActiveRecord::Schema.define(:version => 20130321064119) do
     t.string   "mobile"
     t.string   "major"
     t.date     "year_of_graduation"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.string   "password_digest"
     t.integer  "university_id"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
+    t.boolean  "active"
+    t.string   "confirmation_code"
   end
 
   create_table "universities", :force => true do |t|

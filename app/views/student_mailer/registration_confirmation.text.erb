@@ -2,7 +2,7 @@ Hello <%= @student.proper_name %>
 
 Thank you for registring on Across EC.
 
-
+<%= "http://#{ActionMailer::Base.default_url_options[:host]}/confirm/#{@student.id}/#{@student.confirmation_code}" %>
 
 Please don't reply to this email, it's just a confirmation email.
 Thanks,

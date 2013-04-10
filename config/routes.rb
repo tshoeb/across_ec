@@ -1,5 +1,9 @@
 AcrossEc::Application.routes.draw do
 
+  get "registration_confirmation/new"
+
+  get "password_resets/new"
+
   get "pages/home"
 
   get "pages/about"
@@ -17,6 +21,7 @@ AcrossEc::Application.routes.draw do
   match '/applications/:id/approve', :to => 'applications#approve'
   match '/applications/:id/decline', :to => 'applications#decline'
   match '/login', :to => 'pages#login'
+  match '/confirm/:id/:code', :to => 'students#confirm_account'
 
   resources :universities
   resources :schedules
@@ -25,6 +30,7 @@ AcrossEc::Application.routes.draw do
   resources :students
   resources :sessions_students
   resources :applications
+  resources :password_resets
 
 
   # The priority is based upon order of creation:
