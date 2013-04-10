@@ -52,8 +52,8 @@
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
     <% end %>
     <% if can? :destroy, student %>
-    <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% end %>
+    <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<% end %>
   </tr>
   <% end %>
 <% end %>
