@@ -2,7 +2,7 @@
 
   <% if @student.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+      <h2><%= pluralize(@student.errors.count, "error") %> found</h2>
 
       <ul>
       <% @student.errors.full_messages.each do |msg| %>
@@ -14,7 +14,7 @@
 
   <div class="form_field">
 
-     <h1>New Student</h1>
+     <h1>New Student Account</h1>
 
   <div class="field">
 
