@@ -4,7 +4,7 @@ class SchedulesController < ApplicationController
   load_and_authorize_resource
   def index
     @title = "Schedules"
-    @schedules = Schedule.all
+    @schedules = Schedule.paginate(:page => params[:page], :per_page => 15)
 
     respond_to do |format|
       format.html # index.html.erb

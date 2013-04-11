@@ -1,6 +1,5 @@
 
-<br>
-<br>
+
 <br>
 <br>
 <br>
@@ -25,7 +24,7 @@
     <% if application.student_id == current_student.id %>
     <td><%= application.application_date %></td>
     <td><%= application.course_no %></td>
-    <td><%= application.university_id %></td>
+    <td><%= application.university.name %></td>
     <td><%= application.semester_year %></td>
     <td><%= application.status %></td>
     <% if can? :read, application %>
@@ -64,9 +63,9 @@
 
     <td><%= application.application_date %></td>
     <td><%= application.course_no %></td>
-    <td><%= application.university_id %></td>
-    <td><%= application.passport_copy %></td>
-    <td><%= application.sign_form %></td>
+    <td><%= application.university.name %></td>
+    <td><%= link_to 'View', application.passport_copy.url %></td>
+    <td><%= link_to 'View', application.sign_form.url %></td>
     <td><%= application.semester_year %></td>
     <td><%= application.status %></td>
 

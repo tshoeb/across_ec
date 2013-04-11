@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
 
   def index
     @title = "Students"
-    @students = Student.all
+    @students = Student.paginate(:page => params[:page], :per_page => 15)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -33,7 +33,7 @@ class StudentsController < ApplicationController
   # GET /students/new
   # GET /students/new.json
   def new
-    @title = "Create new Student"
+    @title = "Create Student Account"
     @student = Student.new
 
     respond_to do |format|
