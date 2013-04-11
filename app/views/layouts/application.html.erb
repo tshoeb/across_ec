@@ -7,12 +7,16 @@
 
 </head>
 <body>
+
+	<% unless flash.empty? %>
 	<div id="flash_error">
 		<p class= "flash-error"><%= flash[:alert] %></p>
 
 		<p class= "flash-notice"><%= flash[:notice] %></p>
 
 	</div>
+
+	<% end %> 
 <div id="container" width="900" height="780">	
         <div id="images">
 			<img src="http://i45.tinypic.com/beyl3b.jpg" width="900" height="780">
