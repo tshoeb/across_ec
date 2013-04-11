@@ -296,8 +296,9 @@ margin-left: 14px;}
 }
 #registrar_student
 {
-	float:right;
-	margin-top:-86px;
+	float: right;
+margin-top: -97px;
+margin-right: -70px;
 
 }
 #registration_form
