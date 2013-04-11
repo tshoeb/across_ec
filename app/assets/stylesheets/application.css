@@ -296,8 +296,9 @@ margin-left: 14px;}
 }
 #registrar_student
 {
-	float:right;
-	margin-top:-86px;
+	float: right;
+margin-top: -97px;
+margin-right: -70px;
 
 }
 #registration_form
@@ -307,9 +308,16 @@ margin-left: 14px;}
 }
 #flash_error
 {
-	color:red;
-	margin-left:550px;
-	margin-top:-15px;
+padding: 5px 8px;
+margin: 26px 500px;
+background-color: #FCC;
+border: solid 1px #c66;
+color: red;
+text-align: center;
+height: 40px;
+width: 600px;
+position: absolute;
+
 }
 /*
 #container

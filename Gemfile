@@ -8,6 +8,7 @@ gem 'execjs'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem "cancan"
+gem 'will_paginate'
 
 
 # for deployment on Heroku
