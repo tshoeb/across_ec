@@ -44,7 +44,7 @@
 		<p> <%= link_to "#{current_registrar.proper_name}", current_registrar %> </a><p> 
 
 
-		<%= button_to "Log out", '/registrarlogout' %>
+	
 		</div>
 
 		<% end %>
@@ -54,7 +54,7 @@
 <div id="registrar_student">
 		<p> <%= link_to "#{current_student.proper_name}", current_student %> </a><p> 
 
-		<%= button_to "Log out", '/studentlogout' %>
+		
 </div>
 		<% end %>
 
@@ -87,6 +87,12 @@
 					<% if current_student == nil && current_registrar == nil %>
 					<li><a href="/login">Log in</a></li> 
 					<% end %>
+					<% if current_student %>
+					<li><a href="/studentlogout">Log out</a></li>
+					<% end %> 
+					<% if current_registrar %>
+					<li><a href="/registrarlogout">Log out</a></li>
+					<% end %> 
 			       </ul>
 			</nav>
 
