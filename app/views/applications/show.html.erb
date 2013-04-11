@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
+<br> 
 <br>
-<br>
-<br>
-<br>
-<br>
+<br><br>
+
+
+<div class="show_table"> 
+<h1> Application information </h1> 
+
 <p>
   <b>Application date:</b>
   <%= @application.application_date %>
@@ -60,3 +62,5 @@
 <% if can? :destroy, @application %>
 <%= link_to 'Back', applications_path %>
 <% end %>
+
+</div> 
