@@ -19,6 +19,12 @@ Start of classes:
 <%= @deadline.start_of_classes %>
 </p>
 
+<% if current_registrar %>
+<% if current_registrar.admin == true %>
+<li><a href="/deadlines/1/edit">Update Deadlines</a></li>
+<% end %>
+<% end %>
+
 <br>
 <br>
 <br>

@@ -100,12 +100,6 @@
 					<li><a href="/login">Log in</a></li> 
 					<% end %>
 
-					<% if current_registrar %>
-					<% if current_registrar.admin == true %>
-					<li><a href="/deadlines">Deadlines</a></li>
-					<% end %>
-					<% end %>
-
 					<% if current_student %>
 					<li><a href="/studentlogout">Log out</a></li>
 					<% end %> 
