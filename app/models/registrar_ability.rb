@@ -3,7 +3,7 @@ class RegistrarAbility < ActiveRecord::Base
     def initialize(user)
     	if user.admin == true
          can :manage, :all
-		 cannot :create, Deadline
+		 #cannot :create, Deadline
         else
          can :read, Registrar
          can :update, Registrar, :id => user.id
@@ -13,6 +13,10 @@ class RegistrarAbility < ActiveRecord::Base
          can :read, University
          can :approve, Application
          can :decline, Application
+		 can :read, Schedule
+		 can :create, Schedule
+		 can :edit, Schdedule, :registrar_id => user.registrar_id
+		 can :destroy, Schdedule, :registrar_id => user.registrar_id
         end
     end
 end
