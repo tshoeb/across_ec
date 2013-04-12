@@ -16,7 +16,9 @@
 		
 	<% if current_student %>	
 	<% if current_student.active == false %>
+	<div id="confim_message">
 	<p> Please confirm your account!! </p>
+	</div>
 	<% end %>
 	<% end %>
 
@@ -135,9 +137,9 @@
 
 <ul>
 <li><a href="#home" style="text-decoration: none">Home </a></li> 
-<li><a href="#about" STYLE="TEXT-DECORATION: NONE">About AcrossEC</a></li> 
-<li><a href="#View Schedule" STYLE="TEXT-DECORATION: NONE">Contact Us</a></li>
-<li><a href="#Apply" STYLE="TEXT-DECORATION: NONE">Privacy Policy</a></li>
+<li><a href="about.html.erb" STYLE="TEXT-DECORATION: NONE">About AcrossEC</a></li> 
+<li><a href="contact.html.erb" STYLE="TEXT-DECORATION: NONE">Contact Us</a></li>
+<li><a href="privacy.hrml.erb" STYLE="TEXT-DECORATION: NONE">Privacy Policy</a></li>
 <li><a href="#q" STYLE="TEXT-DECORATION: NONE">Questions</a></li> 
 
 

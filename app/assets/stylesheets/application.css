@@ -88,7 +88,12 @@ a::link {text-decoration: none}
 
 
 
+#first_column{
 
+margin-top: 200px;
+margin-left: 20px;
+
+}
 
 
 #first_column_down{
@@ -319,6 +324,13 @@ width: 600px;
 position: absolute;
 
 }
+
+
+#confim_message{
+
+	margin-top: -10px;
+	margin-left: 20px; 
+}
 /*
 #container
 {
@@ -493,8 +505,7 @@ font-size: 15px;
 
 .show_table {
 
-
-	margin-top: 50px;
+margin-top: 50px;
 position: relative;
 left: 65px;
 top: 4px;
