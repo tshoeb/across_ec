@@ -25,9 +25,9 @@
     <td><%= student.major %></td>
     <td><%= student.year_of_graduation %></td>
 
-    <td><%= button_to "Show", student %></td>
+    <td><%= link_to "Show", student %></td>
     <% if can? :update, student %>
-    <td><%= button_to "Edit", edit_student_path(student) %></td>
+    <td><%= link_to "Edit", edit_student_path(student) %></td>
     <% end %>
     <% if can? :destroy, student %>
     <td><%= button_to "delete", student, :method => :delete %></td>
@@ -44,9 +44,9 @@
     <td><%= student.mobile %></td>
     <td><%= student.major %></td>
     <td><%= student.year_of_graduation %></td>
-    <td><%= button_to "Show", student %></td>
+    <td><%= link_to "Show", student %></td>
     <% if can? :update, student %>
-    <td><%= button_to "Edit", edit_student_path(student) %></td>
+    <td><%= link_to "Edit", edit_student_path(student) %></td>
     <% end %>
     <% if can? :destroy, student %>
     <td><%= button_to "delete", student, :method => :delete %></td>

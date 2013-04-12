@@ -28,10 +28,10 @@
     <td><%= application.semester_year %></td>
     <td><%= application.status %></td>
     <% if can? :read, application %>
-    <td><%= button_to "Show", application %></td>
+    <td><%= link_to "Show", application %></td>
     <% end %>
     <% if can? :update, application %>
-    <td><%= button_to "Edit", edit_application_path(application) %></td>
+    <td><%= link_to "Edit", edit_application_path(application) %></td>
     <% end %>
     <% if can? :destroy, application %>
     <td><%= button_to "delete", application, :method => :delete %></td>
@@ -70,10 +70,10 @@
     <td><%= application.status %></td>
 
     <% if can? :read, application %>
-    <td><%= button_to "Show", application %></td>
+    <td><%= link_to "Show", application %></td>
     <% end %>
     <% if can? :update, application %>
-    <td><%= button_to "Edit", edit_application_path(application) %></td>
+    <td><%= link_to "Edit", edit_application_path(application) %></td>
     <% end %>
     <% if can? :destroy, application %>
     <td><%= button_to "delete", application, :method => :delete %></td>
