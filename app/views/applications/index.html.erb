@@ -70,13 +70,13 @@
     <td><%= application.status %></td>
 
     <% if can? :read, application %>
-    <td><%= link_to 'Show', application %></td>
+    <td><%= button_to "Show", application %></td>
     <% end %>
     <% if can? :update, application %>
-    <td><%= link_to 'Edit', edit_application_path(application) %></td>
+    <td><%= button_to "Edit", edit_application_path(application) %></td>
     <% end %>
     <% if can? :destroy, application %>
-    <td><%= button_to "delete", schedule, :method => :delete %></td>
+    <td><%= button_to "delete", application, :method => :delete %></td>
     <% end %>
     <% end %>
   </tr>
