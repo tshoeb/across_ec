@@ -88,7 +88,7 @@ a::link {text-decoration: none}
 
 
 
-#first_column{
+.first_column{
 
 margin-top: 200px;
 margin-left: 20px;
@@ -325,11 +325,17 @@ position: absolute;
 
 }
 
+#first_error
+{
 
-#confim_message{
+	margin-top: -15px;
+}
 
-	margin-top: -10px;
-	margin-left: 20px; 
+
+
+.confim_message{
+margin-top: -14px;
+
 }
 /*
 #container
