@@ -15,9 +15,13 @@
     <td><%= deadline.semester %></td>
     <td><%= deadline.start_of_registration %></td>
     <td><%= deadline.start_of_classes %></td>
-    <td><%= link_to 'Show', deadline %></td>
-    <td><%= link_to 'Edit', edit_deadline_path(deadline) %></td>
-    <td><%= link_to 'Destroy', deadline, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to "Show", deadline %></td>
+	<% if can? :edit, deadline %>
+    <td><%= button_to "Edit", edit_deadline_path(deadline) %></td>
+	<% end %>
+	<% if can? :destroy, deadline %>
+    <td><%= button_to "delete", deadline, :method => :delete %></td>
+	<% end %>
   </tr>
 <% end %>
 </table>

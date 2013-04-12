@@ -25,12 +25,12 @@
     <td><%= student.major %></td>
     <td><%= student.year_of_graduation %></td>
 
-    <td><%= link_to 'Show', student %></td>
+    <td><%= button_to "Show", student %></td>
     <% if can? :update, student %>
-    <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    <td><%= button_to "Edit", edit_student_path(student) %></td>
     <% end %>
     <% if can? :destroy, student %>
-    <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to "delete", student, :method => :delete %></td>
     <% end %>
   </tr>
 <% end %>
@@ -44,12 +44,12 @@
     <td><%= student.mobile %></td>
     <td><%= student.major %></td>
     <td><%= student.year_of_graduation %></td>
-    <td><%= link_to 'Show', student %></td>
+    <td><%= button_to "Show", student %></td>
     <% if can? :update, student %>
-    <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    <td><%= button_to "Edit", edit_student_path(student) %></td>
     <% end %>
     <% if can? :destroy, student %>
-    <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to "delete", student, :method => :delete %></td>
 	<% end %>
   </tr>
   <% end %>
