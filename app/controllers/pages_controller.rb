@@ -17,4 +17,8 @@ class PagesController < ApplicationController
   def login
   	@title = "Log In"
   end
+  
+  def question
+  	@title = "Questions"
+  end
 end

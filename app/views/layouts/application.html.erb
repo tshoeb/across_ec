@@ -15,7 +15,7 @@
 
 		<p class= "flash-notice"><%= flash[:notice] %></p> </div> 
 		
-	<% if current_student %>	
+	<% if current_student %>
 	<% if current_student.active == false %>
 	<div class="confim_message">
 	<p> Please confirm your account!! </p>
@@ -137,11 +137,11 @@
 	<div id="second_nav">
 
 <ul>
-<li><a href="#home" style="text-decoration: none">Home </a></li> 
-<li><a href="about.html.erb" STYLE="TEXT-DECORATION: NONE">About AcrossEC</a></li> 
-<li><a href="contact.html.erb" STYLE="TEXT-DECORATION: NONE">Contact Us</a></li>
-<li><a href="privacy.hrml.erb" STYLE="TEXT-DECORATION: NONE">Privacy Policy</a></li>
-<li><a href="#q" STYLE="TEXT-DECORATION: NONE">Questions</a></li> 
+<li><a href="/pages/home" style="text-decoration: none">Home </a></li> 
+<li><a href="/pages/about" STYLE="TEXT-DECORATION: NONE">About AcrossEC</a></li> 
+<li><a href="/pages/contact" STYLE="TEXT-DECORATION: NONE">Contact Us</a></li>
+<li><a href="/pages/privacy" STYLE="TEXT-DECORATION: NONE">Privacy Policy</a></li>
+<li><a href="/pages/question" STYLE="TEXT-DECORATION: NONE">Questions</a></li> 
 
 
 </ul>

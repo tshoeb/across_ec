@@ -14,6 +14,8 @@ AcrossEc::Application.routes.draw do
   get "pages/contact"
 
   get "pages/privacy"
+  
+  get "pages/question"
 
   root :to => 'pages#home'
  
