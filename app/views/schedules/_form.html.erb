@@ -13,31 +13,31 @@
 <br><br>
 
 
-<div class="form_field2">
-
+<div class="student_table">
    <h1>New Schedules</h1>
 
-<div class="field">
-    <% f.label :registrar_id %>
-    <%= f.hidden_field :registrar_id %>
-  </div><br />
-  <div class="field">
-    <%= f.label :file_name %><br />
-    <%= f.text_field :file_name %>
-  </div><br />
-  <div class="field">
-    <%= f.label :date_uploaded %><br />
-    <%= f.date_select :date_uploaded %>
-  </div><br />
-  <div class="field">
-    <%= f.label :schedule %><br />
-    <%= f.file_field :schedule %>
-  </div><br />
-  <div class="field">
-    <%= f.label :semester_year %><br />
-    <%= f.text_field :semester_year %>
-  </div><br />
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+        <% f.label :registrar_id %>
+        <%= f.hidden_field :registrar_id %>
+      </div><br />
+      <div class="field">
+        <%= f.label :file_name %><br />
+        <%= f.text_field :file_name %>
+      </div><br />
+      <div class="field">
+        <%= f.label :date_uploaded %><br />
+        <%= f.date_select :date_uploaded %>
+      </div><br />
+      <div class="field">
+        <%= f.label :schedule %><br />
+        <%= f.file_field :schedule %>
+      </div><br />
+      <div class="field">
+        <%= f.label :semester_year %><br />
+        <%= f.text_field :semester_year %>
+      </div><br />
+      <div class="actions">
+        <%= f.submit %>
+      </div>
 <% end %>
+</div> 
