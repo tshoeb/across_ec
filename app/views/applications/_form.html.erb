@@ -15,48 +15,46 @@
 
      <h1>New Application</h1>
 
- <div class="field">
-    <% f.label :student_id %><br />
-    <%= f.hidden_field :student_id %>
-  </div>
-  <div class="field">
-    <%= f.label :application_date %><br />
-    <%= f.date_select :application_date %>
-  </div>
+         <div class="field">
+            <% f.label :student_id %><br />
+            <%= f.hidden_field :student_id %>
+          </div>
+        <div class="field">
+          <%= f.label :application_date %><br />
+          <%= f.date_select :application_date %>
+        </div>
 <br>
-  <div class="field">
-    <%= f.label :course_no %><br />
-    <%= f.text_field :course_no , :placeholder => "Course no from schedules"  %> <%= link_to 'View Schedules', schedules_path %>
-  </div>
+        <div class="field">
+          <%= f.label :course_no %><br />
+          <%= f.text_field :course_no , :placeholder => "Course no from schedules"  %> <%= link_to 'View Schedules', schedules_path %>
+        </div>
 <br>
-  <div class="field">
-    <%= f.label :university_id %><br />
-    <%= collection_select(:application, :university_id, University.all, :id, :name) %><br />
-  </div>
+        <div class="field">
+          <%= f.label :university_id %><br />
+          <%= collection_select(:application, :university_id, University.all, :id, :name) %><br />
+        </div>
 <br>
-  <div class="field">
-	 <%= f.label :passport_copy %><br />
-    <%= f.file_field :passport_copy %>
-  </div>
+        <div class="field">
+      	 <%= f.label :passport_copy %><br />
+          <%= f.file_field :passport_copy %>
+        </div>
 <br>
-  <div class="field">
-    <%= f.label :sign_form %><br />
-    <%= f.file_field :sign_form %>
-  </div>
+        <div class="field">
+          <%= f.label :sign_form %><br />
+          <%= f.file_field :sign_form %>
+        </div>
 <br>
-  <div class="field">
-    <%= f.label :semester_year %><br />
-    <%= f.select(:semester_year, Application::SEMESTER) %>
-  </div>
+      <div class="field">
+        <%= f.label :semester_year %><br />
+        <%= f.select(:semester_year, Application::SEMESTER) %>
+      </div>
 <br/>
-  <div class="actions">
-    
-    <%= f.submit %>
-<br/>
-  </div>
+      <div class="actions">
+        
+        <%= f.submit %>
+    <br/>
+      </div>
 <br/> 
-
-</div>
 
 <% end %>
 
