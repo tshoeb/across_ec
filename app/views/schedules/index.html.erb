@@ -34,9 +34,10 @@
   </tr>
 <% end %>
 </table>
+<div id="paginate_positiion">
 <%= will_paginate %>
 <br />
-
+</div> 
 
 <% if current_registrar != nil %>
 <%= link_to 'New Schedule', new_schedule_path %>
