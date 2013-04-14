@@ -172,7 +172,7 @@ ul#top_nav li a:active  {
 
 #second_nav{
 margin-top: 25%; 
-margin-left: 40%; 
+margin-left: 50%; 
 /* height:40px;
 width:800px; */ 
 color: white;
@@ -713,4 +713,11 @@ width: 400px;
 float: right;
 margin-right: -52px;
 margin-top: 45px;
+}
+
+#section3{
+font-size: 12px;
+width: 400px;
+float: left;
+margin-left: 60px;
 }
