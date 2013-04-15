@@ -14,7 +14,7 @@ class StudentAbility < ActiveRecord::Base
 	  if user.active == true
 		can :create, Application
 		can :read, Application, :student_id => user.id
-		# can :edit, Application, :student_id => user.id
+		can :update, Application, :student_id => user.id, :status => "Pending"
 		# can :destroy, Application, :student_id => user.id
 	  end
   end

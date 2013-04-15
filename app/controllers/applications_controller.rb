@@ -89,13 +89,13 @@ class ApplicationsController < ApplicationController
 
   def approve
     application = Application.find(params[:id])
-    application.update_attributes(:status => 'approved')
+    application.update_attributes(:status => 'Approved')
     StudentMailer.application_approved(@application.student, @application).deliver
     redirect_to application_path(application)
   end
   def decline
     application = Application.find(params[:id])
-    application.update_attributes(:status => 'declined')
+    application.update_attributes(:status => 'Declined')
 	StudentMailer.application_declined(@application.student, @application).deliver
     redirect_to application_path(application)
   end

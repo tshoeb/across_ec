@@ -20,10 +20,10 @@
             <%= f.hidden_field :student_id %>
           </div>
         <div class="field">
-          <%= f.label :application_date %><br />
-          <%= f.date_select :application_date %>
+          <% f.label :application_date %><br />
+          <%= f.hidden_field :application_date %>
         </div>
-<br>
+
         <div class="field">
           <%= f.label :course_no %><br />
           <%= f.text_field :course_no , :placeholder => "Course no from schedules"  %> <%= link_to 'View Schedules', schedules_path %>

@@ -1,7 +1,7 @@
 class Application < ActiveRecord::Base
 	before_save :default_values
   attr_accessible :application_date, :course_no, :passport_copy,:semester_year, :sign_form, :university_id, :student_id, :status
-validates :application_date, :course_no, :passport_copy, :semester_year, :sign_form, :university_id, :presence => true
+validates :course_no, :passport_copy, :semester_year, :sign_form, :university_id, :presence => true
 mount_uploader :passport_copy, PassportCopyUploader
 mount_uploader :sign_form, PassportCopyUploader
 belongs_to :student
@@ -14,6 +14,7 @@ SEMESTER = ['2013', '2014']
 def default_values
 	if (self.status).nil?
 		self.status ||= "Pending"
+		self.application_date = Date.today
 	end
 end
 

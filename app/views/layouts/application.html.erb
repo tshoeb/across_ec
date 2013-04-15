@@ -89,7 +89,12 @@
 					<li><a href="/students">Students </a></li>
 					<% else %>
 					<li><a href="/loginasstudent">Apply</a></li>
-					<% end %>				   
+					<% end %>
+					<% if current_registrar %>
+					<% if current_registrar.admin == true %>
+					<li><a href="/registrars">Registrars</a></li>
+					<% end %>
+					<% end %>
 					<li><a href="/schedules">Schedule</a></li>
 					<% if current_registrar %>
 					<li><a href="/applications">Applications </a></li>
@@ -100,7 +105,15 @@
 					<li><a href="/loginasstudent">Status</a></li>
 					<% end %>
 					<% end %>
+					
+					<% if (current_student == nil || current_student) && current_registrar == nil %> 
 					<li><%= link_to 'Forms', '/resource/form.pdf' -%></li>
+					<% end %>
+					<% if current_registrar  %>
+						<% if current_registrar.admin == false %>
+					<li><%= link_to 'Forms', '/resource/form.pdf' -%></li>
+					<% end %>
+					<% end %>
 					<% if current_student == nil && current_registrar == nil %>
 					<li><a href="/login">Log in</a></li> 
 					<% end %>

@@ -10,11 +10,11 @@
 
   <tr>
     <th>Application date</th>
+	<th>Student</th>
     <th>Course no</th>
     <th>University</th>
     <th>Semester year</th>
     <th>Status</th>
-    <th></th>
 
   </tr>
 
@@ -23,18 +23,13 @@
   <tr>
     <% if application.student_id == current_student.id %>
     <td><%= application.application_date %></td>
+	<td><%= link_to application.student.proper_name, application.student %></td>
     <td><%= application.course_no %></td>
     <td><%= application.university.name %></td>
     <td><%= application.semester_year %></td>
     <td><%= application.status %></td>
     <% if can? :read, application %>
     <td><%= link_to "Show", application %></td>
-    <% end %>
-    <% if can? :update, application %>
-    <td><%= link_to "Edit", edit_application_path(application) %></td>
-    <% end %>
-    <% if can? :destroy, application %>
-    <td><%= button_to "delete", application, :method => :delete %></td>
     <% end %>
     <% end %>
   </tr>
@@ -47,13 +42,13 @@
 
   <tr>
     <th>Application date</th>
+	<th>Student</th>
     <th>Course no</th>
     <th>University</th>
     <th>Passport Copy</th>
     <th>Sign Form</th>
     <th>Semester year</th>
     <th>Status</th>
-    <th></th>
 
   </tr>
 
@@ -62,6 +57,7 @@
     <% if current_registrar.university_id == application.university_id || current_registrar.admin? %>
 
     <td><%= application.application_date %></td>
+	<td><%= link_to application.student.proper_name, application.student %></td>
     <td><%= application.course_no %></td>
     <td><%= application.university.name %></td>
     <td><%= link_to 'View', application.passport_copy.url %></td>
