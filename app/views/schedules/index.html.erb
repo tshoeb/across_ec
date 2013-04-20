@@ -12,6 +12,7 @@
     <th>Schedule</th>
     <th>Semester year</th>
 	<th>University</th>
+ 
 
   </tr>
 
@@ -24,6 +25,7 @@
 	<% temp2 = schedule.registrar_id %>
 	<% temp3 = Registrar.find(temp2).university_id %>
 	<td><%= University.find(temp3).name %></td>
+
 
     <% if can? :update, @schedule %>
     <td><%= link_to "Edit", edit_schedule_path(schedule) %></td>
