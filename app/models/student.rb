@@ -1,6 +1,6 @@
 class Student < ActiveRecord::Base
 
-  before_create :set_confirmation_code
+  #before_create :set_confirmation_code
   has_secure_password
   validates_presence_of :password, :on => :create
 
