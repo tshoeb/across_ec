@@ -25,10 +25,6 @@
   <b>Phone:</b>
   <%= @registrar.phone %>
 </p>
-<p>
-  <b>Admin:</b>
-  <%= @registrar.admin? %>
-</p>
 
 <% if can? :update, @registrar %>
 	<%= link_to 'Edit', edit_registrar_path(@registrar) %> |

@@ -46,11 +46,6 @@
   <%= @student.year_of_graduation %>
 </p>
 
-<p>
-  <b>Active:</b>
-  <%= @student.active %>
-</p>
-
 <% if can? :update, @student %>
 <br>
 <%= link_to 'Edit', edit_student_path(@student) %> |
