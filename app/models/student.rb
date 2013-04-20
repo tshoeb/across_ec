@@ -7,6 +7,8 @@ class Student < ActiveRecord::Base
   attr_accessible :email, :first_name, :last_name, :major, :mobile, :student_number, :year_of_graduation, :password, :password_confirmation, :university_id
 
   has_many :applications
+  
+  MAJORS = [['Art History'], ['Biological Sciences'], ['Business Administration'], ['Chemical Engineering'], ['Communication'], ['Computational Biology'], ['Computer Science'], ['Culture and Politics'], ['Electrical and Computer Engineering'], ['Fashion Design'], ['Graphic Design'], ['Information Systems'], ['Interior Design'], ['International Economics'], ['International Politics'], ['Journalism'], ['Liberal Arts'], ['Mechanical Engineering'], ['Medical'], ['Painting & Printmaking'], ['Petroleum Engineering'], ['Pre-medical']]
 
   validates :first_name, :last_name, :email, :mobile, :presence => true
   validates :email, :uniqueness => true

@@ -15,7 +15,7 @@ class RegistrarAbility < ActiveRecord::Base
          can :decline, Application
 		 can :read, Schedule
 		 can :create, Schedule
-		 can :edit, Schedule, :registrar_id_id => user.id
+		 can :update, Schedule, :registrar_id => user.id
 		 can :destroy, Schedule, :registrar_id => user.id
         end
     end
