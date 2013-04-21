@@ -6,6 +6,7 @@ class RegistrarAbility < ActiveRecord::Base
 		 cannot :create, Deadline
         else
          can :read, Registrar
+		 can :read, Student
          can :update, Registrar, :id => user.id
          can :destroy, Registrar, :id => user.id
          can :read, Student, :university_id => user.university_id
