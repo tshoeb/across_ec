@@ -16,12 +16,8 @@
   <tr>
     <td><%= university.name %></td>
     <td><%= link_to 'Show', university %></td>
-	<% if can? :update, @university %
     <td><%= link_to 'Edit', edit_university_path(university) %></td>
-	<% end %>
-   <% if can? :destroy, @university %>
     <td><%= button_to "delete", university, :method => :delete %></td>
-    <% end %>
   </tr>
 <% end %>
 </table>
