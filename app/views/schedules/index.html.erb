@@ -12,12 +12,9 @@
     <th>Schedule</th>
     <th>Semester year</th>
 	<th>University</th>
-	<% if can? :update, @schedule %>
-	<th>Action</th>
-	<% end %>
-	<% if can? :destroy, @schedule %>
-	<th>Action</th>
-	<% end %>
+<% if can? :update, @schedule %>
+     <th colspan="2"> Actions </th>
+	 <% end %>
 
   </tr>
 
