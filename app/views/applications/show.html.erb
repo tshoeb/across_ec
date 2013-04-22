@@ -50,12 +50,13 @@
   <%= @application.status %>
 </p>
 
-
+<% if @application.status == "Pending" %>
 <% if current_registrar %>
  <%= button_to 'Approve', :controller => 'applications', :action => 'approve' %>
 <% end %>
 <% if current_registrar %>
  <%= button_to 'Decline', :controller => 'applications', :action => 'decline' %>
+<% end %>
 <% end %>
 <% if can? :update, @application %>
 <%= link_to 'Edit', edit_application_path(@application) %> |
