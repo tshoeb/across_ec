@@ -46,6 +46,10 @@
   <%= @student.year_of_graduation %>
 </p>
 
+<% if @student.active == false %>
+<%= button_to 'Resend Confirmation Email', :controller => 'students', :action => 'resend_confirmation' %>
+<% end %>
+
 <% if can? :update, @student %>
 <br>
 <%= link_to 'Edit', edit_student_path(@student) %> |

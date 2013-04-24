@@ -25,6 +25,7 @@ AcrossEc::Application.routes.draw do
   match '/studentlogout', :to => 'sessions_students#destroy'
   match '/applications/:id/approve', :to => 'applications#approve'
   match '/applications/:id/decline', :to => 'applications#decline'
+  match '/students/:id/resend_confirmation', :to => 'students#resend_confirmation'
   match '/login', :to => 'pages#login'
   match '/confirm/:id/:code', :to => 'students#confirm_account'
 

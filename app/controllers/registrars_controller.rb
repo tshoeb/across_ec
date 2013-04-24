@@ -1,7 +1,7 @@
 class RegistrarsController < ApplicationController
   # GET /registrars
   # GET /registrars.json
-  load_and_authorize_resource
+  load_and_authorize_resource #authorization code to limit access to controller actions, to avoid url hacking
   def index
     @title = "Registrars"
     @registrars = Registrar.all

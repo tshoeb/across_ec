@@ -1,10 +1,10 @@
 class SchedulesController < ApplicationController
   # GET /schedules
   # GET /schedules.json
-  load_and_authorize_resource
+  load_and_authorize_resource #authorization code to limit access to controller actions, to avoid url hacking
   def index
     @title = "Schedules"
-    @schedules = Schedule.paginate(:page => params[:page], :per_page => 14)
+    @schedules = Schedule.paginate(:page => params[:page], :per_page => 14) # if more than 14 records shifts the rest of the records to other page
 
     respond_to do |format|
       format.html # index.html.erb

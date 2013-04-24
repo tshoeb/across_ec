@@ -1,0 +1,11 @@
+Hello <%= @student.proper_name %>
+
+You have requested the confirmation link to be resent.
+
+Please click this link to confirm your account:
+
+<%= "http://#{ActionMailer::Base.default_url_options[:host]}/confirm/#{@student.id}/#{@student.confirmation_code}" %>
+
+Please don't reply to this email, it's just a confirmation email.
+Thanks,
+Across EC team

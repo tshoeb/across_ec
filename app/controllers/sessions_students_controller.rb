@@ -1,8 +1,10 @@
 class SessionsStudentsController < ApplicationController
+
+# controller that logs in a student user
   def new
   end
 
-  def create
+  def create # authenticates student user and logs in user
 	  student = Student.find_by_email(params[:email])
 	  if student && student.authenticate(params[:password])
 	    session[:student_id] = student.id
@@ -13,7 +15,7 @@ class SessionsStudentsController < ApplicationController
 	  end
   end
 
-  def destroy
+  def destroy # log out
     session[:student_id] = nil
     redirect_to root_url, :notice => "Logged out!"
   end

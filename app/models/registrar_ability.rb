@@ -1,7 +1,8 @@
 class RegistrarAbility < ActiveRecord::Base
   include CanCan::Ability
+  # this is defining the registrar access control
     def initialize(user)
-    	if user.admin == true
+    	if user.admin == true # conditions if registrar is an admin
          can :manage, :all
 		 cannot :create, Deadline
         else

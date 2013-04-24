@@ -7,7 +7,7 @@ class Schedule < ActiveRecord::Base
   belongs_to :registrar
   validates :file_name, :semester_year, :presence => true  
   
-  def setting_date
+  def setting_date # to set the creation date by default
 	self.date_uploaded = Date.today
   end
 end

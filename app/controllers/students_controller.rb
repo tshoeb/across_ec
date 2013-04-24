@@ -1,11 +1,11 @@
 class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
-  load_and_authorize_resource
+  load_and_authorize_resource #authorization code to limit access to controller actions, to avoid url hacking
 
   def index
     @title = "Students"
-    @students = Student.paginate(:page => params[:page], :per_page => 14)
+    @students = Student.paginate(:page => params[:page], :per_page => 14) # if more than 14 records shifts the rest of the records to other page
 
     respond_to do |format|
       format.html # index.html.erb
@@ -55,7 +55,7 @@ class StudentsController < ApplicationController
 
     respond_to do |format|
       if @student.save
-        StudentMailer.registration_confirmation(@student).deliver
+        StudentMailer.registration_confirmation(@student).deliver # sends registration confirmation email and link
         session[:student_id] = @student.id
         format.html { redirect_to @student, notice: 'Successfully registered' }
         format.json { render json: @student, status: :created, location: @student }
@@ -74,10 +74,10 @@ class StudentsController < ApplicationController
     respond_to do |format|
       if @student.update_attributes(params[:student])
 		newemail = @student.email
-		if oldemail != newemail
-			@student.set_confirmation_code
+		if oldemail != newemail # process only executed if user adds new email after updating to protect security
+			@student.set_confirmation_code # reassigns a new confirmation code
 			@student.save!
-			StudentMailer.registration_confirmation(@student).deliver
+			StudentMailer.registration_confirmation(@student).deliver # sends registration confirmation email and link
 		end
         format.html { redirect_to @student, notice: 'Student was successfully updated.' }
         format.json { head :no_content }
@@ -99,7 +99,7 @@ class StudentsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  def confirm_account
+  def confirm_account # method to execute the send confirmation link
 	@student = Student.find(params[:id])
 	@login_student = Student.find_by_confirmation_code!(params[:code])
 	if @student == @login_student
@@ -110,5 +110,9 @@ class StudentsController < ApplicationController
 	else
 		redirect_to root_path, notice: 'Sorry may be your link expired or you did not sign in.'
 	end
+  end
+  def resend_confirmation # resending confirmation link
+	StudentMailer.resend_confirmation(@student).deliver
+	redirect_to @student, notice: 'Confirmation email sent again'
   end
 end

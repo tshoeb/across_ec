@@ -1,8 +1,10 @@
 class PasswordResetsController < ApplicationController
+
+	# Controller to send password reset link to students
   def new
   end
   
-  def create
+  def create # controller action connected to the page that allows user to enter his/her email and get the password reset link
 	  student = Student.find_by_email(params[:email])
 	  if student
 		  student.send_password_reset
@@ -12,11 +14,11 @@ class PasswordResetsController < ApplicationController
 		end
   end
   
-  def edit
+  def edit # finds user using the token and assigns to a variable
 	@student = Student.find_by_password_reset_token!(params[:id])
   end
   
-  def update
+  def update # checks if link is 2 hours old or not
 	  @student = Student.find_by_password_reset_token!(params[:id])
 	  if @student.password_reset_sent_at < 2.hours.ago
 		redirect_to new_password_reset_path, :alert => "Password reset has expired."

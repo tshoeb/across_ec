@@ -1,7 +1,7 @@
 class DeadlinesController < ApplicationController
   # GET /deadlines
   # GET /deadlines.json
-    load_and_authorize_resource
+    load_and_authorize_resource #authorization code to limit access to controller actions, to avoid url hacking
 	
   def index
     @deadlines = Deadline.all

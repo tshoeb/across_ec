@@ -1,10 +1,10 @@
 class ApplicationsController < ApplicationController
   # GET /applications
   # GET /applications.json
-  load_and_authorize_resource
+  load_and_authorize_resource #authorization code to limit access to controller actions, to avoid url hacking
   def index
     @title = "Applications"
-    @applications = Application.all
+    @applications = Application.paginate(:page => params[:page], :per_page => 14) # if more than 14 records shifts the rest of the records to other page
 
     respond_to do |format|
       format.html # index.html.erb
@@ -49,7 +49,7 @@ class ApplicationsController < ApplicationController
 
     respond_to do |format|
       if @application.save
-        StudentMailer.application_confirmation(@application.student).deliver
+        StudentMailer.application_confirmation(@application.student).deliver # sending application confirmation email
         format.html { redirect_to @application, notice: 'Application was successfully created.' }
         format.json { render json: @application, status: :created, location: @application }
       else
@@ -87,13 +87,13 @@ class ApplicationsController < ApplicationController
     end
   end
 
-  def approve
+  def approve # method to change the application status to approved by registrar and send the email about it to student
     application = Application.find(params[:id])
     application.update_attributes(:status => 'Approved')
     StudentMailer.application_approved(@application.student, @application).deliver
     redirect_to applications_path
   end
-  def decline
+  def decline # method to change the application status to declined by registrar and send the email about it to student
     application = Application.find(params[:id])
     application.update_attributes(:status => 'Declined')
 	StudentMailer.application_declined(@application.student, @application).deliver
