@@ -1,0 +1,26 @@
+Source Code & Launched application:
+	The application’s source code is available on github through this link: https://github.com/tshoeb/across_ec
+	The application is currently hosted on the Heroku platform and can be accessed through this link: http://www.across-ec.herokuapp.com
+
+Duplication Guide lines:
+	In order to create a working version of our system, following steps need to be achieved:
+		1.	Download rails installer, which can be found on http://railsinstaller.org/ for Windows and Mac OS platform.
+		2.	Go to command line with Ruby on Rails (Windows) or terminal (Mac OS) and type in the following command: “git clone https://github.com/tshoeb/across_ec.git”
+		3.	Switch directories to the application folder and run “bundle install”
+		4.	To create the database tables run “rake db:migrate”
+	After completing these steps, you can create a working version of our system and customize it. In order to deploy this web-app, you need to use your own hosting server and your own Github account. We are currently using Heroku and the steps to deploy to Heroku are as follows:
+		1.	To initialize your Git directory Run “git init”
+		2.	To add the changes run “git add”
+		3.	To commit your changes run “git commit –m “your message”
+		4.	To push to your Git repository run “git push origin master”
+		5.	To create your Heroku link run “heroku create”
+		6.	To push your web-app to Heroku run “git push heroku master”
+
+	For further information on Github and Heroku, visit https://help.github.com/ and https://help.heroku.com/ respectively.
+	There is no special hardware consideration except that you need an internet connection. You need to have Windows or Mac OS, or a Linux version to work on the project.
+	In order to be able to edit the application code efficiently, we recommend using a text editor such as Notepad ++(Windows), Textmate or Sublime (Mac OS).
+
+Known Issues:
+	1.	Heroku hosting service doesn’t allow to keep user uploaded files for a long time, files will only stay for an hour and half maximum, unless a paid subscription is purchased. 
+	The first option to solve this issue is by acquiring a paid Heroku subscription, which can be done through https://get.heroku.com/pricing. 
+	The second option to solve this issue is to use an Amazon S3 storage server to store uploaded files. A helpful guide to how this could be done can be found on https://github.com/jnicklas/carrierwave#using-amazon-s3
